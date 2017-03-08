@@ -22,7 +22,7 @@
 										cicada
 									</div>
 									<div class="event-subtitle">
-										the Tech Hunt will start in...
+										The Tech Hunt will start in...
 									</div>
 								</div>
 							</div>
