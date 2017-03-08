@@ -28,6 +28,6 @@ class AuthController extends Controller
     {
         $user = Socialite::driver('facebook')->user();
 
-        return $user;
+        return response()->json(['data' => $user]);
     }
 }
