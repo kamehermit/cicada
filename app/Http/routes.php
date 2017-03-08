@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',['as' => 'index','uses' => 'PageController@index']);
 Route::get('auth/facebook', 'AuthController@redirectToProvider');
 Route::get('auth/facebook/callback', 'AuthController@handleProviderCallback');
