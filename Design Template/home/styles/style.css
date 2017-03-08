@@ -1,0 +1,117 @@
+html, body{
+	font-family: 'Roboto', sans-serif; 
+}
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+    margin-bottom: 0;
+}
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+}
+.navbar-brand img{
+	width: 75%;
+}
+body [class*="col-"] {
+	padding-left:0;
+	padding-right:0
+}
+body .row {
+	margin-left:0;
+	margin-right:0
+}
+/* container adjusted */
+body .container {
+	width:100%;
+	max-width:none;
+	padding:0;
+}
+
+.login-splash .countdown{
+	background: #63D6DE;
+	margin-top: 20px;
+	border: none;
+}
+.login-splash .countdown .time{
+	color: white;
+	font-weight: 300;
+	font-size: 350%;
+	text-align: center;
+	padding:auto auto auto auto;
+}
+.login-splash .countdown .time p{
+	font-size: 25%;
+	font-weight: 400;
+}
+.login{
+	margin-top: 0px;
+	background: white; 
+}
+.login-splash{
+	background: #21c5d1;
+	height: 100vh;
+	-webkit-box-shadow: 5px 5px 15px -5px #999;
+	-moz-box-shadow: 5px 5px 15px -5px #999;
+	box-shadow: 5px 5px 15px -5px #999;
+}
+.login-panel{
+		
+}
+.login-panel-pretext{
+	padding: 80px 40px 0px 40px;
+	text-align: center;
+
+}
+.login-panel-content{
+	padding: 20px 40px 0px 40px;
+	color:#333;
+}
+.login-panel-button{
+	font-weight: 300;
+	font-size: 300%;
+}
+.login-panel-button .btn-default{
+	background: #FF6D6E;
+	color: white;
+	border: none; 
+}
+.login-splash .event .event-logo{
+	margin-top: 70px; 
+}
+.login-splash .event .event-logo .img-responsive{
+	margin: 0 auto;
+}
+.sponsor .img-responsive{
+	margin: 0 auto;
+	width: 80%;
+	margin-top: 50px;
+	padding-top: 40px;
+	padding-bottom: 50px; 	
+}
+.login-splash .event .event-title{
+	text-align: center;
+	color: white;
+	font-size: 400%;
+	font-weight: 300;
+}
+.login-splash .event .event-subtitle{
+	font-size: 140%;
+	color: white;
+	text-align: center;
+}
+.login-splash .subtext-img{
+	margin-top: 50px;
+}
+.login-splash .subtext-img .img-responsive{
+	margin: 0 auto;
+	width: 100px;
+	margin-bottom: 0px;
+}
+.login-splash .subtext{
+	font-size: 200%;
+	margin-top: 50px;
+	color: white;
+	font-weight: 300;
+	text-align: center;
+}
