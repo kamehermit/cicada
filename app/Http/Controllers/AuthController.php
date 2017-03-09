@@ -6,28 +6,42 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\User;
 use Auth;
 use Socialite;
 
 class AuthController extends Controller
 {
-    public function redirectToProvider()
+    public function redirect()
     {
         return Socialite::driver('facebook')->redirect();
     }
 
-    /**
-     * Obtain the user information from provider.  Check if the user already exists in our
-     * database by looking up their provider_id in the database.
-     * If the user exists, log them in. Otherwise, create a new user then log them in. After that 
-     * redirect them to the authenticated users homepage.
-     *
-     * @return Response
-     */
-    public function handleProviderCallback()
+    public function callback()
     {
-        $user = Socialite::driver('facebook')->user();
+        try{
+            $user = Socialite::driver('facebook')->user();
+        }
+        catch(Exception $e){
+            return Redirect::to('auth/facebook');
+        }
+        $authUser = $this->findOrCreateUser($user);
 
-        return response()->json(['data' => $user]);
+        Auth::login($authUser, true);
+
+        return Redirect::to('dashboard');
+    }
+
+    private function findOrCreateUser($facebookUser){
+        if ($authUser = User::where('facebook_id', $facebookUser->id)->first()) {
+            return $authUser;
+        }
+
+        return User::create([
+            'name' => $facebookUser->name,
+            'email' => $facebookUser->email,
+            'github_id' => $facebookUser->id,
+            'avatar' => $facebookUser->avatar
+        ]);
     }
 }
