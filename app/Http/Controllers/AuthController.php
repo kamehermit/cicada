@@ -23,25 +23,30 @@ class AuthController extends Controller
             $user = Socialite::driver('facebook')->user();
         }
         catch(Exception $e){
-            return Redirect::to('auth/facebook');
+            return redirect('auth/facebook');
         }
         $authUser = $this->findOrCreateUser($user);
 
         Auth::login($authUser, true);
 
-        return Redirect::to('dashboard');
+        return redirect('dashboard');
     }
 
     private function findOrCreateUser($facebookUser){
-        if ($authUser = User::where('facebook_id', $facebookUser->id)->first()) {
-            return $authUser;
-        }
+    	try{
+    		if ($authUser = User::where('facebook_id', $facebookUser->id)->first()) {
+            	return $authUser;
+        	}
 
-        return User::create([
-            'name' => $facebookUser->name,
-            'email' => $facebookUser->email,
-            'github_id' => $facebookUser->id,
-            'avatar' => $facebookUser->avatar
-        ]);
+        	return User::create([
+            	'name' => $facebookUser->name,
+            	'email' => $facebookUser->email,
+            	'facebook_id' => $facebookUser->id,
+            	'avatar' => $facebookUser->avatar
+        	]);	
+    	}
+    	catch(Exception $e){
+    		return redirect('/');
+    	}
     }
 }
