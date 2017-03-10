@@ -30,6 +30,22 @@ class PageController extends Controller
     }
 
     public function dashboard(){
+        $data = EventSchedule::get()->first();
+        $start_time = Carbon::createFromFormat('Y-m-d H:i:s', $data->start, 'Asia/Kolkata');
+        $end_time = Carbon::createFromFormat('Y-m-d H:i:s', $data->end, 'Asia/Kolkata');
+        $cur_time = Carbon::now('Asia/Kolkata');
+        if($cur_time->lt($start_time) || $cur_time->gte($end_time)){
+            $date = $start_time->format('Y-m-d');
+            $time = $start_time->format('H:i:s');
+            $start = $date."T".$time;
+            return view('pages.dashboard',['start_time'=>$start,'tagline'=>'...untill the Tech Hunt begins']);
+        }
+        else{
+            $date = $end_time->format('Y-m-d');
+            $time = $end_time->format('H:i:s');
+            $end = $date."T".$time;
+            return view('pages.dashboard',['start_time'=>$end,'tagline'=>'...untill the Tech Hunt endss']);
+        }
     	return view('pages.dashboard');
     }
 
