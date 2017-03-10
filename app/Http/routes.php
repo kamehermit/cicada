@@ -14,4 +14,13 @@
 Route::get('/',['as' => 'index','uses' => 'PageController@index']);
 Route::get('auth/facebook', 'AuthController@redirect');
 Route::get('auth/facebook/callback', 'AuthController@callback');
-Route::get('dashboard',['as' => 'dashboard','uses' => 'PageController@dashboard']);
+Route::get('test','PageController@test');
+
+Route::group(['middleware' => ['web','auth']],function(){
+	Route::get('dashboard',['as' => 'dashboard','uses' => 'PageController@dashboard']);	
+});
+
+Route::group(['prefix'=>'quest','middleware' => ['web','auth','time']], function(){
+	Route::get('terminal',['as' => 'terminal','uses' => 'PageController@terminal']);
+	Route::get('redirect/{flag}/{level}',['as'=>'level1','uses' => 'PageController@level1']);
+});

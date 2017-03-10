@@ -6,6 +6,12 @@
 @endsection
 
 @section('content')
+	<!--Dashboard-->
+	<div class="dashboard">
+		<div class="container-fluid">
+			
+		</div>	
+	</div>
 	
 @endsection
 

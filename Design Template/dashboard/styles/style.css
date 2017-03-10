@@ -1,0 +1,49 @@
+html, body{
+	font-family: 'Roboto', sans-serif; 
+}
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+    margin-bottom: 0;
+}
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+}
+.navbar-brand img{
+	width: 75%;
+}
+body [class*="col-"] {
+	padding-left:0;
+	padding-right:0
+}
+body .row {
+	margin-left:0;
+	margin-right:0
+}
+/* container adjusted */
+body .container {
+	width:100%;
+	max-width:none;
+	padding:0;
+}
+.header{
+	background: #21c5d1;
+	
+}
+.countdown{
+	background: #63D6DE;
+	margin-top: 20px;
+	border: none;
+}
+.countdown .time{
+	color: white;
+	font-weight: 300;
+	font-size: 350%;
+	text-align: center;
+	padding:auto auto auto auto;
+}
+.countdown .time p{
+	font-size: 25%;
+	font-weight: 400;
+}

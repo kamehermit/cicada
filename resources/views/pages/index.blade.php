@@ -24,7 +24,7 @@
 										cicada
 									</div>
 									<div class="event-subtitle">
-										The Tech Hunt will start in...
+										{{ $tagline }}
 									</div>
 								</div>
 							</div>

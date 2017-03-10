@@ -18,8 +18,13 @@ class CreateUsersTable extends Migration
             $table->string('email');
             $table->string('facebook_id')->unique();
             $table->string('avatar');
+            $table->integer('page_id')->unsigned();
+            $table->dateTime('progress_time');
             $table->rememberToken();
             $table->timestamps();
+        });
+        Schema::table('users', function($table){
+            $table->foreign('page_id')->references('id')->on('pages');
         });
     }
 
