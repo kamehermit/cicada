@@ -44,7 +44,7 @@ class PageController extends Controller
             $date = $end_time->format('Y-m-d');
             $time = $end_time->format('H:i:s');
             $end = $date."T".$time;
-            return view('pages.dashboard',['start_time'=>$end,'tagline'=>'...untill the Tech Hunt endss']);
+            return view('pages.dashboard',['start_time'=>$end,'tagline'=>'...untill the Tech Hunt ends']);
         }
     	return view('pages.dashboard');
     }

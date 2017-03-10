@@ -54,7 +54,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="tagline">
-						...untill the Tech Hunt begins
+						{{ $tagline }}
 					</div>
 				</div>
 			</div>
@@ -83,9 +83,22 @@
 					
 				</div>
 				<div class="col-md-3">
-					<div class="play-button">
-						<a href="{{ url('quest/terminal')}}" class="btn btn-lg btn-default btn-block">PLAY</a>	
+					<div class="row">
+						<div class="col-md-12">
+							<div class="play-button">
+								<a href="{{ url('quest/terminal')}}" class="btn btn-lg btn-default btn-block">PLAY</a>	
+							</div>
+						</div>
 					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="login-status">
+								Hi {{ \Auth::user()->name }}, you're logged in.
+							</div>
+						</div>
+					</div>
+					
+					
 				</div>	
 			</div>
 		</div>
