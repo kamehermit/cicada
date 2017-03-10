@@ -59,7 +59,7 @@
 <body> 
 <script type="text/javascript"> 
   var Typer={
-  text: "<span id=\"a\">cicada@convoke</span>:<span id=\"b\">~</span><span id=\"c\">$</span> cat story.txt<br/><br/>Welcome to Cicada.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>The tech hunt, which is a part of <a href=\"http://www.convoke.io\" target=\"_blank\">CONVOKE</a>, the annual technical fest of CLUSTER INNOVATION CENTRE. Abcdefgh",
+  text: "<span id=\"a\">cicada@convoke</span>:<span id=\"b\">~/Documents</span><span id=\"c\">$</span> cat story.txt<br/><br/>Welcome to <a href=\"https://en.wikipedia.org/wiki/Cicada_3301\" target=\"_blank\">Cicada</a>: The enigmatic online tech hunt and a part of <a href=\"http://www.convoke.io\" target=\"_blank\">CONVOKE</a>, the annual technical fest of <a href=\"https://www.ducic.ac.in\" target=\"_blank\">CLUSTER INNOVATION CENTRE</a>, Delhi University.<p> Hello neo, <br> (FBI Agent ID: reeves) <br> Sentinel (case file name) committed his first murders in 1996, strangling four guests at the Savoy Hotel but was never caught and identified. There are talks in the wind that he has recently resurfaced and is preparing for his next big crime, leaving the FBI in a state of utter chaos. As a top level agent of the organisation, you have been assigned to this case. You must identify the killer before you are destined to the same fate as the previous agents who became victims of the infamous psychopath. </p> <p> But first, you must gain access to your sat phone using your credentials.</p> <p> Type \'<span id=\"c\">help</span>\' to see a list of available commands..",
   accessCountimer:null,
   index:0, // current cursor position
   speed:2, // speed of the Typer
@@ -190,7 +190,7 @@ function foc(){
 
 function addInputTerminal(){
   $('input').last().val($('input').last().val()+" ")
-  $('body').append('<div class="input_terminal_common"> <span id="a">cicada@convoke</span>:<span id="b">~</span><span id="c">$ </span> <input type="text" size=50></div>');
+  $('body').append('<div class="input_terminal_common"> <span id="a">cicada@convoke</span>:<span id="b">~/Documents</span><span id="c">$ </span> <input type="text" size=50></div>');
   $('input').last().focus();
   $('input').last().keypress(function(e) {
     if(e.which == 13) {
@@ -204,6 +204,23 @@ function addInputTerminal(){
         else if($('input').last().val()=="ls"){
           addlsTerminal();
         }
+        else if($('input').last().val()=="cat story.txt"){
+          addCatStoryTerminal();
+        }
+        else if($('input').last().val()=="cat beware.php"){
+          addCatBewareTerminal();
+        }
+        else if($('input').last().val()=="cat password.txt"){
+          addCatPasswordTerminal();
+        }
+        else if($('input').last().val()=="whoami"){
+          addWhoamiTerminal();
+        }
+        else if(/login -u (\S)* -p (\S)*/.test($('input').last().val())){
+          var username_entered = $('input').last().val().substring($('input').last().val().lastIndexOf("-u ")+3,$('input').last().val().lastIndexOf(" -p"));
+          var password_entered = $('input').last().val().substring($('input').last().val().lastIndexOf("-p ")+3,$('input').last().val().length);
+          login(username_entered, password_entered);
+        }
         else{
           addInvalidTerminal();
         }
@@ -212,8 +229,39 @@ function addInputTerminal(){
 });
 }
 
+function login(username_entered, password_entered){
+  //TODO: verify username_entered, password_entered via AJAX and remove following hardcoded code and call loginSuccess() or loginFailure() accordingly.
+  var URL = ""
+  if(username_entered=="neo" && password_entered=="reeves"){
+    loginSuccess(URL);
+  }
+  else{
+    loginFailure();
+  }
+}
+
+function loginSuccess(URL){
+  
+  addLoginSuccessTerminal();
+  //TODO: redirect to next level URL
+}
+
+function loginFailure(){
+  addLoginFailureTerminal();
+}
+
+function addLoginSuccessTerminal(){
+  $('body').append('<div class="input_terminal_common"> Login Success </div>');
+  addInputTerminal();
+}
+
+function addLoginFailureTerminal(){
+  $('body').append('<div class="input_terminal_common"> Invalid Credentials </div>');
+  addInputTerminal();
+}
+
 function addHelpTerminal(){
-  $('body').append('<div class="input_terminal_common"> login -u username -p password <br><br> ls </div>');
+  $('body').append('<div class="input_terminal_common">ls: lists files in current directory <br> login -u username -p password <br> whoami: print effective userid <br> cat filename: print contents of file </div>');
   addInputTerminal();
 }
 
@@ -223,11 +271,29 @@ function addInvalidTerminal(){
 }
 
 function addlsTerminal(){
-  $('body').append('<div class="input_terminal_common"> story.txt <br> beware.php </div>');
+  $('body').append('<div class="input_terminal_common"> story.txt <br> password.txt <br> beware.php </div>');
   addInputTerminal();
 }
 
+function addCatStoryTerminal(){
+  $('body').append('<div class="input_terminal_common"> You have already been told the story! </div>');
+  addInputTerminal();
+}
 
+function addCatBewareTerminal(){
+  $('body').append('<div class="input_terminal_common"> Stay undetected by the killer at all costs. </div>');
+  addInputTerminal();
+}
+
+function addCatPasswordTerminal(){
+  $('body').append('<div class="input_terminal_common"> Your password is: reeves </div>');
+  addInputTerminal();
+}
+
+function addWhoamiTerminal(){
+  $('body').append('<div class="input_terminal_common"> Your userid is: neo </div>');
+  addInputTerminal();
+}
 
 /*document.getElementById('text_input_terminal').onkeydown = function(e){
    if(e.keyCode == 13){
