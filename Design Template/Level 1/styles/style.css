@@ -1,0 +1,140 @@
+html, body{
+	font-family: 'Roboto', sans-serif; 
+}
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+    margin-bottom: 0;
+}
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+}
+.navbar-brand img{
+	width: 75%;
+}
+body [class*="col-"] {
+	padding-left:0;
+	padding-right:0
+}
+body .row {
+	margin-left:0;
+	margin-right:0
+}
+/* container adjusted */
+.header .container-fluid {
+	width:100%;
+	max-width:none;
+	padding:0;
+}
+.header .header-title{
+	padding-top: 10px;
+	font-weight: 300;
+	font-size: 300%;
+	color: white;
+	margin: 0 auto;
+}
+.header .header-title .img-responsive{
+	margin: 0 auto;
+	width: 200px; 
+}
+.header{
+	padding-top: 50px;
+	background: #21c5d1;
+	height: 60vh;
+
+}
+.countdown{
+	background: #63D6DE;
+	margin-top: 20px;
+	border: none;
+}
+.countdown .time{
+	color: white;
+	font-weight: 300;
+	font-size: 250%;
+	text-align: center;
+	padding:auto auto auto auto;
+}
+.countdown .time p{
+	font-size: 30%;
+	font-weight: 400;
+}
+.leaderboard{
+	background: white;
+	z-index: 200;
+	margin-top: -20vh;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	height: 600px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.leaderboard-header{
+	background: #E6E6EA;
+	margin: 0px;
+	padding: 0px;
+}
+.leaderboard .container-fluid {
+	width:100%;
+	max-width:none;
+	padding:0;
+}
+.controller{
+	width: 100px;
+	padding: 5px;
+	float: left;
+}
+.leaderboard-header-title{
+	font-weight: 300;
+	padding: 20px;
+	font-size: 250%;
+	color: #21c5d1;
+}
+.tagline{
+	color: white;
+	font-weight: 300;
+	text-align: center;
+	font-size: 150%;
+	padding-top: 15px;
+}
+.sponsor{
+	margin-top: 4vh; 
+	background: #EDEDED;
+	height: 100px;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	margin-bottom: 2vw;
+	color: #333;
+}
+.play-button{
+	padding: 20px;
+	font-weight: 300;
+	font-size: 300%;
+}
+.play-button .btn-default{
+	background: #FF6D6E;
+	color: white;
+	border: none; 
+}
+#game_master{
+	overflow:auto;
+	height:90px;
+	padding: 20px;
+}
+.hints_hr{
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #21c5d1;
+    margin: 1em 0;
+    padding: 0; 
+}
+.hints_title{
+	color: red;
+}
+.hints_time{
+
+}
+.hints_content{
+
+}
