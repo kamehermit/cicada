@@ -1,0 +1,756 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+
+
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-19e26a1cefb5f1e92203a9468134dbf46b5a5308aeeeee09c96b32fec8c8b044.css" integrity="sha256-GeJqHO+18ekiA6lGgTTb9GtaUwiu7u4JyWsy/sjIsEQ=" media="all" rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-f886e4c2d166bd2750de4f941f1f14b0658f60e7cf5a680a5926b1c2fb1f5252.css" integrity="sha256-+IbkwtFmvSdQ3k+UHx8UsGWPYOfPWmgKWSaxwvsfUlI=" media="all" rel="stylesheet" />
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>devices.css/devices.min.css at master · marvelapp/devices.css</title>
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta content="https://avatars0.githubusercontent.com/u/7040655?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="marvelapp/devices.css" property="og:title" /><meta content="https://github.com/marvelapp/devices.css" property="og:url" /><meta content="devices.css - Pure CSS phones and tablets" property="og:description" />
+
+  <link rel="assets" href="https://assets-cdn.github.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MTQ5NDU0NDc5Ojg0YmFlNmZkMDg5NzQxNTdlNTBmYjNjZWZmNDZlYjIyNGUwYzYwYTgyY2MxNzY2NGY2YTE3ZDBmMDRmMjY1NDg=--5cfc8ee90c9bcfd0fffa135c316f128ae81f3682">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+  <meta name="request-id" content="9DA0:48A3:165BE1C:2386D11:58C8DC69" data-pjax-transient>
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+  <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="https://collector.githubapp.com/github-external/browser_event" name="octolytics-event-url" /><meta content="9DA0:48A3:165BE1C:2386D11:58C8DC69" name="octolytics-dimension-request_id" /><meta content="16596327" name="octolytics-actor-id" /><meta content="utkarshmttl" name="octolytics-actor-login" /><meta content="e438480f5ed673ea5d0d98c10a00780c99f6a6bf79f725197bbf2f38d2d66c49" name="octolytics-actor-hash" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" name="analytics-location" />
+
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+  
+  
+      <meta name="hostname" content="github.com">
+  <meta name="user-login" content="utkarshmttl">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="Yjg4NmE4NzkzMTAxZjE1OWE0Mjg1ZWQxZGVkMDJlODEwYTE4NWY2OTdmZmYyZmRmNDdhNGRkMjkyMmUyYzAwZXx7InJlbW90ZV9hZGRyZXNzIjoiMTQuMTM5LjQ1LjI0MyIsInJlcXVlc3RfaWQiOiI5REEwOjQ4QTM6MTY1QkUxQzoyMzg2RDExOjU4QzhEQzY5IiwidGltZXN0YW1wIjoxNDg5NTU4NjQyLCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+
+
+  <meta name="html-safe-nonce" content="290351ba73e300412bd48bb15f81331022d508b4">
+
+  <meta http-equiv="x-pjax-version" content="326a5dc434eec6b1b698b94bb3fdcb8e">
+  
+
+    
+  <meta name="description" content="devices.css - Pure CSS phones and tablets">
+  <meta name="go-import" content="github.com/marvelapp/devices.css git https://github.com/marvelapp/devices.css.git">
+
+  <meta content="7040655" name="octolytics-dimension-user_id" /><meta content="marvelapp" name="octolytics-dimension-user_login" /><meta content="18042286" name="octolytics-dimension-repository_id" /><meta content="marvelapp/devices.css" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="18042286" name="octolytics-dimension-repository_network_root_id" /><meta content="marvelapp/devices.css" name="octolytics-dimension-repository_network_root_nwo" />
+      <link href="https://github.com/marvelapp/devices.css/commits/master.atom" rel="alternate" title="Recent Commits to devices.css:master" type="application/atom+xml">
+
+
+    <link rel="canonical" href="https://github.com/marvelapp/devices.css/blob/master/assets/devices.min.css" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+
+  <meta name="u2f-support" content="true">
+
+  </head>
+
+  <body class="logged-in env-production page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+
+        
+<div class="header" role="banner">
+  <div class="container clearfix">
+    <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg aria-hidden="true" class="octicon octicon-mark-github" height="32" version="1.1" viewBox="0 0 16 16" width="32"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+
+
+        <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/marvelapp/devices.css/search" class="js-site-search-form" data-scoped-search-url="/marvelapp/devices.css/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+
+      <ul class="header-nav float-left" role="navigation">
+        <li class="header-nav-item">
+          <a href="/pulls" aria-label="Pull requests you created" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="/issues" aria-label="Issues you created" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav float-right" id="user-links">
+  <li class="header-nav-item">
+    
+
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new"
+       aria-label="Create new…"
+       data-ga-click="Header, create new, icon:add">
+      <svg aria-hidden="true" class="octicon octicon-plus float-left" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5z"/></svg>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+<a class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
+  New gist
+</a>
+
+  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="marvelapp/devices.css">This repository</span>
+  </div>
+    <a class="dropdown-item" href="/marvelapp/devices.css/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/utkarshmttl"
+       aria-label="View profile and more"
+       data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@utkarshmttl" class="avatar" src="https://avatars3.githubusercontent.com/u/16596327?v=3&amp;s=40" height="20" width="20">
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu dropdown-menu-sw">
+        <div class="dropdown-header header-nav-current-user css-truncate">
+          Signed in as <strong class="css-truncate-target">utkarshmttl</strong>
+        </div>
+
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="/utkarshmttl" data-ga-click="Header, go to profile, text:your profile">
+          Your profile
+        </a>
+        <a class="dropdown-item" href="/utkarshmttl?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+        <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+          Explore
+        </a>
+          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+        <div class="dropdown-divider"></div>
+
+        <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+          Settings
+        </a>
+
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="zlh+7ej8VyF/2vi9yqux1fpoCax9ssCye4u6QO8mor8aaoWcKMbKyutFKXqNWBuFnugN0Qc2VWeAVPQsCYNGmA==" /></div>
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+</form>      </div>
+    </div>
+  </li>
+</ul>
+
+
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/logout" class="sr-only right-0" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="y6SHH72Kqi36/p0/VNAD2j499jI1aQUDORTTsAd3NcAflnxufbA3xm5hTPgTI6mKWr3yT0/tkNbCy53c4dLR5w==" /></div>
+      <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+        Sign out
+      </button>
+</form>  </div>
+</div>
+
+
+      
+
+  </div>
+
+  <div id="start-of-content" class="accessibility-aid"></div>
+
+    <div id="js-flash-container">
+</div>
+
+
+
+  <div role="main">
+      <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+        
+
+
+
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+
+    <ul class="pagehead-actions">
+  <li>
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="sEEsGSPZZTOgBeKr6f+d9KoHY4hYyopjMfnTxQjbGsh0cOFtsEfdjHtX6IiRa84TAU+5TAqubwLWqLkXQ9C8GA==" /></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="18042286" />
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="/marvelapp/devices.css/subscription"
+            class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true"
+            data-ga-click="Repository, click Watch settings, action:blob#show">
+            <span class="js-select-button">
+              <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+              Watch
+            </span>
+          </a>
+          <a class="social-count js-social-count"
+            href="/marvelapp/devices.css/watchers"
+            aria-label="74 users are watching this repository">
+            74
+          </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header js-navigation-enable" tabindex="-1">
+              <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                      Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore" />
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-mute" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"/></svg>
+                      Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+      <div class="js-toggler-container js-social-container starring-container ">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/marvelapp/devices.css/unstar" class="starred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="MpmLsvDETiY+iZ6uXrOOZ5vKWzq1ENGO7NkVAyhrTHEZjmffOJ0BoiRfanmypAkhRTr3JJvT393fQV4QRMkvtA==" /></div>
+      <button
+        type="submit"
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar marvelapp/devices.css"
+        data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/marvelapp/devices.css/stargazers"
+           aria-label="2447 users starred this repository">
+          2,447
+        </a>
+</form>
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/marvelapp/devices.css/star" class="unstarred" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="1n+2gTSjq9Q7zSS6wzbZsmsIY5IB4pDXx9MyOVehezr2EW75CvYzsNt8+qG33Hs9Fn1cl2HsVvCXJWru2NJm3A==" /></div>
+      <button
+        type="submit"
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star marvelapp/devices.css"
+        data-ga-click="Repository, click star button, action:blob#show; text:Star">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74z"/></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/marvelapp/devices.css/stargazers"
+           aria-label="2447 users starred this repository">
+          2,447
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <a href="#fork-destination-box" class="btn btn-sm btn-with-count"
+              title="Fork your own copy of marvelapp/devices.css to your account"
+              aria-label="Fork your own copy of marvelapp/devices.css to your account"
+              rel="facebox"
+              data-ga-click="Repository, show fork modal, action:blob#show; text:Fork">
+              <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" version="1.1" viewBox="0 0 10 16" width="10"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+            Fork
+          </a>
+
+          <div id="fork-destination-box" style="display: none;">
+            <h2 class="facebox-header" data-facebox-id="facebox-header">Where should we fork this repository?</h2>
+            <include-fragment src=""
+                class="js-fork-select-fragment fork-select-fragment"
+                data-url="/marvelapp/devices.css/fork?fragment=1">
+              <img alt="Loading" height="64" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="64" />
+            </include-fragment>
+          </div>
+
+    <a href="/marvelapp/devices.css/network" class="social-count"
+       aria-label="273 users forked this repository">
+      273
+    </a>
+  </li>
+</ul>
+
+    <h1 class="public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a href="/marvelapp" class="url fn" rel="author">marvelapp</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/marvelapp/devices.css" data-pjax="#js-repo-pjax-container">devices.css</a></strong>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/marvelapp/devices.css" class="js-selected-navigation-item selected reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /marvelapp/devices.css" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a href="/marvelapp/devices.css/issues" class="js-selected-navigation-item reponav-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /marvelapp/devices.css/issues" itemprop="url">
+        <svg aria-hidden="true" class="octicon octicon-issue-opened" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="counter">5</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/marvelapp/devices.css/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /marvelapp/devices.css/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">3</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+  <a href="/marvelapp/devices.css/projects" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /marvelapp/devices.css/projects">
+    <svg aria-hidden="true" class="octicon octicon-project" height="16" version="1.1" viewBox="0 0 15 16" width="15"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+    Projects
+    <span class="counter">0</span>
+</a>
+    <a href="/marvelapp/devices.css/wiki" class="js-selected-navigation-item reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /marvelapp/devices.css/wiki">
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"/></svg>
+      Wiki
+</a>
+
+  <a href="/marvelapp/devices.css/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /marvelapp/devices.css/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0v2h3.6l.9-1.8.9 5.4L9 8.5l1.6 1.5H14V8z"/></svg>
+    Pulse
+</a>
+  <a href="/marvelapp/devices.css/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /marvelapp/devices.css/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+
+<a href="/marvelapp/devices.css/blob/7b88c304afbf13cdac0b639809910acd3580098b/assets/devices.min.css" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:e7e155bad3d4b356909663545759adc5 -->
+
+<div class="file-navigation js-zeroclipboard-container">
+  
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    
+    type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+        <span class="select-menu-title">Switch branches/tags</span>
+      </div>
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="form-control js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" data-filter-placeholder="Filter branches/tags" class="js-select-menu-tab" role="tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" data-filter-placeholder="Find a tag…" class="js-select-menu-tab" role="tab">Tags</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches" role="menu">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/marvelapp/devices.css/blob/gh-pages/assets/devices.min.css"
+               data-name="gh-pages"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                gh-pages
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open selected"
+               href="/marvelapp/devices.css/blob/master/assets/devices.min.css"
+               data-name="master"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                master
+              </span>
+            </a>
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+               href="/marvelapp/devices.css/blob/pr/12/assets/devices.min.css"
+               data-name="pr/12"
+               data-skip-pjax="true"
+               rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target js-select-menu-filter-text">
+                pr/12
+              </span>
+            </a>
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <a class="select-menu-item js-navigation-item js-navigation-open "
+              href="/marvelapp/devices.css/tree/v1.0/assets/devices.min.css"
+              data-name="v1.0"
+              data-skip-pjax="true"
+              rel="nofollow">
+              <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5z"/></svg>
+              <span class="select-menu-item-text css-truncate-target" title="v1.0">
+                v1.0
+              </span>
+            </a>
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="BtnGroup float-right">
+    <a href="/marvelapp/devices.css/find/master"
+          class="js-pjax-capture-input btn btn-sm BtnGroup-item"
+          data-pjax
+          data-hotkey="t">
+      Find file
+    </a>
+    <button aria-label="Copy file path to clipboard" class="js-zeroclipboard btn btn-sm BtnGroup-item tooltipped tooltipped-s" data-copied-hint="Copied!" type="button">Copy path</button>
+  </div>
+  <div class="breadcrumb js-zeroclipboard-target">
+    <span class="repo-root js-repo-root"><span class="js-path-segment"><a href="/marvelapp/devices.css"><span>devices.css</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a href="/marvelapp/devices.css/tree/master/assets"><span>assets</span></a></span><span class="separator">/</span><strong class="final-path">devices.min.css</strong>
+  </div>
+</div>
+
+
+  <div class="commit-tease">
+      <span class="float-right">
+        <a class="commit-tease-sha" href="/marvelapp/devices.css/commit/255fa0fd356d4ee34ff961fa91487a7415122545" data-pjax>
+          255fa0f
+        </a>
+        <relative-time datetime="2015-09-07T13:51:39Z">Sep 7, 2015</relative-time>
+      </span>
+      <div>
+        <img alt="" class="avatar" data-canonical-src="https://2.gravatar.com/avatar/2b428e273a7166ae9e2430298d7ce077?d=https%3A%2F%2Fassets-cdn.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png&amp;r=x&amp;s=140" height="20" src="https://camo.githubusercontent.com/6042717009ea945fde4cf5afba60042590760cf9/68747470733a2f2f322e67726176617461722e636f6d2f6176617461722f32623432386532373361373136366165396532343330323938643763653037373f643d68747470732533412532462532466173736574732d63646e2e6769746875622e636f6d253246696d6167657325324667726176617461727325324667726176617461722d757365722d3432302e706e6726723d7826733d313430" width="20" />
+        <span class="user-mention">tsvp</span>
+          <a href="/marvelapp/devices.css/commit/255fa0fd356d4ee34ff961fa91487a7415122545" class="message" data-pjax="true" title="Adding tweaks">Adding tweaks</a>
+      </div>
+
+    <div class="commit-tease-contributors">
+      <button type="button" class="btn-link muted-link contributors-toggle" data-facebox="#blob_contributors_box">
+        <strong>2</strong>
+         contributors
+      </button>
+          <a class="avatar-link tooltipped tooltipped-s" aria-label="olegtsaplin" href="/marvelapp/devices.css/commits/master/assets/devices.min.css?author=olegtsaplin"><img alt="@olegtsaplin" class="avatar" height="20" src="https://avatars1.githubusercontent.com/u/4729514?v=3&amp;s=40" width="20" /> </a>
+    <a class="avatar-link tooltipped tooltipped-s" aria-label="iKlaus" href="/marvelapp/devices.css/commits/master/assets/devices.min.css?author=iKlaus"><img alt="@iKlaus" class="avatar" height="20" src="https://avatars0.githubusercontent.com/u/141443?v=3&amp;s=40" width="20" /> </a>
+
+
+    </div>
+
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header" data-facebox-id="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list" data-facebox-id="facebox-description">
+          <li class="facebox-user-list-item">
+            <img alt="@olegtsaplin" height="24" src="https://avatars3.githubusercontent.com/u/4729514?v=3&amp;s=48" width="24" />
+            <a href="/olegtsaplin">olegtsaplin</a>
+          </li>
+          <li class="facebox-user-list-item">
+            <img alt="@iKlaus" height="24" src="https://avatars2.githubusercontent.com/u/141443?v=3&amp;s=48" width="24" />
+            <a href="/iKlaus">iKlaus</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+
+<div class="file">
+  <div class="file-header">
+  <div class="file-actions">
+
+    <div class="BtnGroup">
+      <a href="/marvelapp/devices.css/raw/master/assets/devices.min.css" class="btn btn-sm BtnGroup-item" id="raw-url">Raw</a>
+        <a href="/marvelapp/devices.css/blame/master/assets/devices.min.css" class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b">Blame</a>
+      <a href="/marvelapp/devices.css/commits/master/assets/devices.min.css" class="btn btn-sm BtnGroup-item" rel="nofollow">History</a>
+    </div>
+
+
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/marvelapp/devices.css/edit/master/assets/devices.min.css" class="inline-form js-update-url-with-hash" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Sm5nNp4SGhHfROxmj7aHBYfOJ+NNYZOua2YDV4YGY4oSKRxRPWzklHXEAw3EPR3aCyQg96Eyj60W/1NhL2F0+A==" /></div>
+          <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
+            aria-label="Fork this project and edit the file" data-hotkey="e" data-disable-with>
+            <svg aria-hidden="true" class="octicon octicon-pencil" height="16" version="1.1" viewBox="0 0 14 16" width="14"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
+          </button>
+</form>        <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="/marvelapp/devices.css/delete/master/assets/devices.min.css" class="inline-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="D/Np36OdiqqmzX7ZXNEZkmunaTXKYd/7CgYjtHvDWfa0wHkYH1eMU7vPsCEjN1ZF1PMkNIlQK9deULDUK8o97A==" /></div>
+          <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
+            aria-label="Fork this project and delete the file" data-disable-with>
+            <svg aria-hidden="true" class="octicon octicon-trashcan" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
+          </button>
+</form>  </div>
+
+  <div class="file-info">
+      2 lines (1 sloc)
+      <span class="file-info-divider"></span>
+    43.2 KB
+  </div>
+</div>
+
+  
+
+  <div itemprop="text" class="blob-wrapper data type-css">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">.marvel-device{display:inline-block;position:relative;box-sizing:content-box !important}.marvel-device .screen{width:100%;position:relative;height:100%;color:white;z-index:2;text-align:center;display:block;-webkit-border-radius:1px;border-radius:1px;-webkit-box-shadow:0 0 0 3px #111;box-shadow:0 0 0 3px #111}.marvel-device .top-bar,.marvel-device .bottom-bar{height:3px;background:black;width:100%;display:block}.marvel-device .middle-bar{width:3px;height:4px;top:0px;left:90px;background:black;position:absolute}.marvel-device.iphone6{width:375px;height:667px;padding:105px 24px;background:#d9dbdc;-webkit-border-radius:56px;border-radius:56px;-webkit-box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.2);box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.2)}.marvel-device.iphone6:before{width:calc(100% - 12px);height:calc(100% - 12px);position:absolute;top:6px;content:&#39;&#39;;left:6px;-webkit-border-radius:50px;border-radius:50px;background:#f8f8f8;z-index:1}.marvel-device.iphone6:after{width:calc(100% - 16px);height:calc(100% - 16px);position:absolute;top:8px;content:&#39;&#39;;left:8px;-webkit-border-radius:48px;border-radius:48px;-webkit-box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.1),inset 0 0 6px 3px #fff;box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.1),inset 0 0 6px 3px #fff;z-index:2}.marvel-device.iphone6 .home{-webkit-border-radius:100%;border-radius:100%;width:68px;height:68px;position:absolute;left:50%;margin-left:-34px;bottom:22px;z-index:3;background:#303233;background:-moz-linear-gradient(-45deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);background:-webkit-gradient(linear, left top, right bottom, color-stop(0%, #303233), color-stop(50%, #b5b7b9), color-stop(69%, #f0f2f2), color-stop(100%, #303233));background:-webkit-linear-gradient(-45deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);background:-o-linear-gradient(-45deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);background:-ms-linear-gradient(-45deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);background:linear-gradient(135deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;#303233&#39;, endColorstr=&#39;#303233&#39;,GradientType=1 )}.marvel-device.iphone6 .home:before{background:#f8f8f8;position:absolute;content:&#39;&#39;;-webkit-border-radius:100%;border-radius:100%;width:calc(100% - 8px);height:calc(100% - 8px);top:4px;left:4px}.marvel-device.iphone6 .top-bar{height:14px;background:#bfbfc0;position:absolute;top:68px;left:0}.marvel-device.iphone6 .bottom-bar{height:14px;background:#bfbfc0;position:absolute;bottom:68px;left:0}.marvel-device.iphone6 .sleep{position:absolute;top:190px;right:-4px;width:4px;height:66px;-webkit-border-radius:0px 2px 2px 0px;border-radius:0px 2px 2px 0px;background:#d9dbdc}.marvel-device.iphone6 .volume{position:absolute;left:-4px;top:188px;z-index:0;height:66px;width:4px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:#d9dbdc}.marvel-device.iphone6 .volume:before{position:absolute;left:2px;top:-78px;height:40px;width:2px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:inherit;content:&#39;&#39;;display:block}.marvel-device.iphone6 .volume:after{position:absolute;left:0px;top:82px;height:66px;width:4px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:inherit;content:&#39;&#39;;display:block}.marvel-device.iphone6 .camera{background:#3c3d3d;width:12px;height:12px;position:absolute;top:24px;left:50%;margin-left:-6px;-webkit-border-radius:100%;border-radius:100%;z-index:3}.marvel-device.iphone6 .sensor{background:#3c3d3d;width:16px;height:16px;position:absolute;top:49px;left:134px;z-index:3;-webkit-border-radius:100%;border-radius:100%}.marvel-device.iphone6 .speaker{background:#292728;width:70px;height:6px;position:absolute;top:54px;left:50%;margin-left:-35px;-webkit-border-radius:6px;border-radius:6px;z-index:3}.marvel-device.iphone6.gold{background:#f9e7d3}.marvel-device.iphone6.gold .top-bar,.marvel-device.iphone6.gold .bottom-bar{background:white}.marvel-device.iphone6.gold .sleep,.marvel-device.iphone6.gold .volume{background:#f9e7d3}.marvel-device.iphone6.gold .home{background:#cebba9;background:-moz-linear-gradient(-45deg, #cebba9 0%, #f9e7d3 50%, #cebba9 100%);background:-webkit-gradient(linear, left top, right bottom, color-stop(0%, #cebba9), color-stop(50%, #f9e7d3), color-stop(100%, #cebba9));background:-webkit-linear-gradient(-45deg, #cebba9 0%, #f9e7d3 50%, #cebba9 100%);background:-o-linear-gradient(-45deg, #cebba9 0%, #f9e7d3 50%, #cebba9 100%);background:-ms-linear-gradient(-45deg, #cebba9 0%, #f9e7d3 50%, #cebba9 100%);background:linear-gradient(135deg, #cebba9 0%, #f9e7d3 50%, #cebba9 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;#cebba9&#39;, endColorstr=&#39;#cebba9&#39;,GradientType=1 )}.marvel-device.iphone6.black{background:#464646;-webkit-box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.7);box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.7)}.marvel-device.iphone6.black:before{background:#080808}.marvel-device.iphone6.black:after{-webkit-box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.1),inset 0 0 6px 3px #212121;box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.1),inset 0 0 6px 3px #212121}.marvel-device.iphone6.black .top-bar,.marvel-device.iphone6.black .bottom-bar{background:#212121}.marvel-device.iphone6.black .volume,.marvel-device.iphone6.black .sleep{background:#464646}.marvel-device.iphone6.black .camera{background:#080808}.marvel-device.iphone6.black .home{background:#080808;background:-moz-linear-gradient(-45deg, #080808 0%, #464646 50%, #080808 100%);background:-webkit-gradient(linear, left top, right bottom, color-stop(0%, #080808), color-stop(50%, #464646), color-stop(100%, #080808));background:-webkit-linear-gradient(-45deg, #080808 0%, #464646 50%, #080808 100%);background:-o-linear-gradient(-45deg, #080808 0%, #464646 50%, #080808 100%);background:-ms-linear-gradient(-45deg, #080808 0%, #464646 50%, #080808 100%);background:linear-gradient(135deg, #080808 0%, #464646 50%, #080808 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;#080808&#39;, endColorstr=&#39;#080808&#39;,GradientType=1 )}.marvel-device.iphone6.black .home:before{background:#080808}.marvel-device.iphone6.landscape{padding:24px 105px;height:375px;width:667px}.marvel-device.iphone6.landscape .sleep{top:100%;-webkit-border-radius:0px 0px 2px 2px;border-radius:0px 0px 2px 2px;right:190px;height:4px;width:66px}.marvel-device.iphone6.landscape .volume{width:66px;height:4px;top:-4px;left:calc(100% - 188px - 66px);-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone6.landscape .volume:before{width:40px;height:2px;top:2px;right:-78px;left:auto;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone6.landscape .volume:after{left:-82px;width:66px;height:4px;top:0;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone6.landscape .top-bar{width:14px;height:100%;left:calc(100% - 68px -  14px);top:0}.marvel-device.iphone6.landscape .bottom-bar{width:14px;height:100%;left:68px;top:0}.marvel-device.iphone6.landscape .home{top:50%;margin-top:-34px;margin-left:0;left:22px}.marvel-device.iphone6.landscape .sensor{top:134px;left:calc(100% - 49px - 16px)}.marvel-device.iphone6.landscape .speaker{height:70px;width:6px;left:calc(100% - 54px - 6px);top:50%;margin-left:0px;margin-top:-35px}.marvel-device.iphone6.landscape .camera{left:calc(100% - 32px);top:50%;margin-left:0px;margin-top:-5px}.marvel-device.iphone6plus{width:414px;height:736px;padding:112px 26px;background:#d9dbdc;-webkit-border-radius:56px;border-radius:56px;-webkit-box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.2);box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.2)}.marvel-device.iphone6plus:before{width:calc(100% - 12px);height:calc(100% - 12px);position:absolute;top:6px;content:&#39;&#39;;left:6px;-webkit-border-radius:50px;border-radius:50px;background:#f8f8f8;z-index:1}.marvel-device.iphone6plus:after{width:calc(100% - 16px);height:calc(100% - 16px);position:absolute;top:8px;content:&#39;&#39;;left:8px;-webkit-border-radius:48px;border-radius:48px;-webkit-box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.1),inset 0 0 6px 3px #fff;box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.1),inset 0 0 6px 3px #fff;z-index:2}.marvel-device.iphone6plus .home{-webkit-border-radius:100%;border-radius:100%;width:68px;height:68px;position:absolute;left:50%;margin-left:-34px;bottom:24px;z-index:3;background:#303233;background:-moz-linear-gradient(-45deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);background:-webkit-gradient(linear, left top, right bottom, color-stop(0%, #303233), color-stop(50%, #b5b7b9), color-stop(69%, #f0f2f2), color-stop(100%, #303233));background:-webkit-linear-gradient(-45deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);background:-o-linear-gradient(-45deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);background:-ms-linear-gradient(-45deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);background:linear-gradient(135deg, #303233 0%, #b5b7b9 50%, #f0f2f2 69%, #303233 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;#303233&#39;, endColorstr=&#39;#303233&#39;,GradientType=1 )}.marvel-device.iphone6plus .home:before{background:#f8f8f8;position:absolute;content:&#39;&#39;;-webkit-border-radius:100%;border-radius:100%;width:calc(100% - 8px);height:calc(100% - 8px);top:4px;left:4px}.marvel-device.iphone6plus .top-bar{height:14px;background:#bfbfc0;position:absolute;top:68px;left:0}.marvel-device.iphone6plus .bottom-bar{height:14px;background:#bfbfc0;position:absolute;bottom:68px;left:0}.marvel-device.iphone6plus .sleep{position:absolute;top:190px;right:-4px;width:4px;height:66px;-webkit-border-radius:0px 2px 2px 0px;border-radius:0px 2px 2px 0px;background:#d9dbdc}.marvel-device.iphone6plus .volume{position:absolute;left:-4px;top:188px;z-index:0;height:66px;width:4px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:#d9dbdc}.marvel-device.iphone6plus .volume:before{position:absolute;left:2px;top:-78px;height:40px;width:2px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:inherit;content:&#39;&#39;;display:block}.marvel-device.iphone6plus .volume:after{position:absolute;left:0px;top:82px;height:66px;width:4px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:inherit;content:&#39;&#39;;display:block}.marvel-device.iphone6plus .camera{background:#3c3d3d;width:12px;height:12px;position:absolute;top:29px;left:50%;margin-left:-6px;-webkit-border-radius:100%;border-radius:100%;z-index:3}.marvel-device.iphone6plus .sensor{background:#3c3d3d;width:16px;height:16px;position:absolute;top:54px;left:154px;z-index:3;-webkit-border-radius:100%;border-radius:100%}.marvel-device.iphone6plus .speaker{background:#292728;width:70px;height:6px;position:absolute;top:59px;left:50%;margin-left:-35px;-webkit-border-radius:6px;border-radius:6px;z-index:3}.marvel-device.iphone6plus.gold{background:#f9e7d3}.marvel-device.iphone6plus.gold .top-bar,.marvel-device.iphone6plus.gold .bottom-bar{background:white}.marvel-device.iphone6plus.gold .sleep,.marvel-device.iphone6plus.gold .volume{background:#f9e7d3}.marvel-device.iphone6plus.gold .home{background:#cebba9;background:-moz-linear-gradient(-45deg, #cebba9 0%, #f9e7d3 50%, #cebba9 100%);background:-webkit-gradient(linear, left top, right bottom, color-stop(0%, #cebba9), color-stop(50%, #f9e7d3), color-stop(100%, #cebba9));background:-webkit-linear-gradient(-45deg, #cebba9 0%, #f9e7d3 50%, #cebba9 100%);background:-o-linear-gradient(-45deg, #cebba9 0%, #f9e7d3 50%, #cebba9 100%);background:-ms-linear-gradient(-45deg, #cebba9 0%, #f9e7d3 50%, #cebba9 100%);background:linear-gradient(135deg, #cebba9 0%, #f9e7d3 50%, #cebba9 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;#cebba9&#39;, endColorstr=&#39;#cebba9&#39;,GradientType=1 )}.marvel-device.iphone6plus.black{background:#464646;-webkit-box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.7);box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.7)}.marvel-device.iphone6plus.black:before{background:#080808}.marvel-device.iphone6plus.black:after{-webkit-box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.1),inset 0 0 6px 3px #212121;box-shadow:inset 0 0 3px 0 rgba(0,0,0,0.1),inset 0 0 6px 3px #212121}.marvel-device.iphone6plus.black .top-bar,.marvel-device.iphone6plus.black .bottom-bar{background:#212121}.marvel-device.iphone6plus.black .volume,.marvel-device.iphone6plus.black .sleep{background:#464646}.marvel-device.iphone6plus.black .camera{background:#080808}.marvel-device.iphone6plus.black .home{background:#080808;background:-moz-linear-gradient(-45deg, #080808 0%, #464646 50%, #080808 100%);background:-webkit-gradient(linear, left top, right bottom, color-stop(0%, #080808), color-stop(50%, #464646), color-stop(100%, #080808));background:-webkit-linear-gradient(-45deg, #080808 0%, #464646 50%, #080808 100%);background:-o-linear-gradient(-45deg, #080808 0%, #464646 50%, #080808 100%);background:-ms-linear-gradient(-45deg, #080808 0%, #464646 50%, #080808 100%);background:linear-gradient(135deg, #080808 0%, #464646 50%, #080808 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;#080808&#39;, endColorstr=&#39;#080808&#39;,GradientType=1 )}.marvel-device.iphone6plus.black .home:before{background:#080808}.marvel-device.iphone6plus.landscape{padding:26px 112px;height:414px;width:736px}.marvel-device.iphone6plus.landscape .sleep{top:100%;-webkit-border-radius:0px 0px 2px 2px;border-radius:0px 0px 2px 2px;right:190px;height:4px;width:66px}.marvel-device.iphone6plus.landscape .volume{width:66px;height:4px;top:-4px;left:calc(100% - 188px - 66px);-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone6plus.landscape .volume:before{width:40px;height:2px;top:2px;right:-78px;left:auto;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone6plus.landscape .volume:after{left:-82px;width:66px;height:4px;top:0;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone6plus.landscape .top-bar{width:14px;height:100%;left:calc(100% - 68px -  14px);top:0}.marvel-device.iphone6plus.landscape .bottom-bar{width:14px;height:100%;left:68px;top:0}.marvel-device.iphone6plus.landscape .home{top:50%;margin-top:-34px;margin-left:0;left:24px}.marvel-device.iphone6plus.landscape .sensor{top:154px;left:calc(100% - 54px - 16px)}.marvel-device.iphone6plus.landscape .speaker{height:70px;width:6px;left:calc(100% - 59px - 6px);top:50%;margin-left:0px;margin-top:-35px}.marvel-device.iphone6plus.landscape .camera{left:calc(100% - 29px);top:50%;margin-left:0px;margin-top:-5px}.marvel-device.iphone5s,.marvel-device.iphone5c{padding:105px 22px;background:#2c2b2c;width:320px;height:568px;-webkit-border-radius:50px;border-radius:50px}.marvel-device.iphone5s:before,.marvel-device.iphone5c:before{width:calc(100% - 8px);height:calc(100% - 8px);position:absolute;top:4px;content:&#39;&#39;;left:4px;-webkit-border-radius:46px;border-radius:46px;background:#1e1e1e;z-index:1}.marvel-device.iphone5s .sleep,.marvel-device.iphone5c .sleep{position:absolute;top:-4px;right:60px;width:60px;height:4px;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px;background:#282727}.marvel-device.iphone5s .volume,.marvel-device.iphone5c .volume{position:absolute;left:-4px;top:180px;z-index:0;height:27px;width:4px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:#282727}.marvel-device.iphone5s .volume:before,.marvel-device.iphone5c .volume:before{position:absolute;left:0px;top:-75px;height:35px;width:4px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:inherit;content:&#39;&#39;;display:block}.marvel-device.iphone5s .volume:after,.marvel-device.iphone5c .volume:after{position:absolute;left:0px;bottom:-64px;height:27px;width:4px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:inherit;content:&#39;&#39;;display:block}.marvel-device.iphone5s .camera,.marvel-device.iphone5c .camera{background:#3c3d3d;width:10px;height:10px;position:absolute;top:32px;left:50%;margin-left:-5px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;z-index:3}.marvel-device.iphone5s .sensor,.marvel-device.iphone5c .sensor{background:#3c3d3d;width:10px;height:10px;position:absolute;top:60px;left:160px;z-index:3;margin-left:-32px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}.marvel-device.iphone5s .speaker,.marvel-device.iphone5c .speaker{background:#292728;width:64px;height:10px;position:absolute;top:60px;left:50%;margin-left:-32px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;z-index:3}.marvel-device.iphone5s.landscape,.marvel-device.iphone5c.landscape{padding:22px 105px;height:320px;width:568px}.marvel-device.iphone5s.landscape .sleep,.marvel-device.iphone5c.landscape .sleep{right:-4px;top:calc(100% - 120px);height:60px;width:4px;-webkit-border-radius:0px 2px 2px 0px;border-radius:0px 2px 2px 0px}.marvel-device.iphone5s.landscape .volume,.marvel-device.iphone5c.landscape .volume{width:27px;height:4px;top:-4px;left:calc(100% - 180px);-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone5s.landscape .volume:before,.marvel-device.iphone5c.landscape .volume:before{width:35px;height:4px;top:0px;right:-75px;left:auto;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone5s.landscape .volume:after,.marvel-device.iphone5c.landscape .volume:after{bottom:0px;left:-64px;z-index:999;height:4px;width:27px;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone5s.landscape .sensor,.marvel-device.iphone5c.landscape .sensor{top:160px;left:calc(100% - 60px);margin-left:0px;margin-top:-32px}.marvel-device.iphone5s.landscape .speaker,.marvel-device.iphone5c.landscape .speaker{height:64px;width:10px;left:calc(100% - 60px);top:50%;margin-left:0px;margin-top:-32px}.marvel-device.iphone5s.landscape .camera,.marvel-device.iphone5c.landscape .camera{left:calc(100% - 32px);top:50%;margin-left:0px;margin-top:-5px}.marvel-device.iphone5s .home{-moz-border-radius:36px;-webkit-border-radius:36px;border-radius:36px;width:68px;-webkit-box-shadow:inset 0 0 0 4px #2c2b2c;box-shadow:inset 0 0 0 4px #2c2b2c;height:68px;position:absolute;left:50%;margin-left:-34px;bottom:19px;z-index:3}.marvel-device.iphone5s .top-bar{top:70px;position:absolute;left:0}.marvel-device.iphone5s .bottom-bar{bottom:70px;position:absolute;left:0}.marvel-device.iphone5s.landscape .home{left:19px;bottom:50%;margin-bottom:-34px;margin-left:0px}.marvel-device.iphone5s.landscape .top-bar{left:70px;top:0px;width:3px;height:100%}.marvel-device.iphone5s.landscape .bottom-bar{right:70px;left:auto;bottom:0px;width:3px;height:100%}.marvel-device.iphone5s.silver{background:#bcbcbc}.marvel-device.iphone5s.silver:before{background:#fcfcfc}.marvel-device.iphone5s.silver .volume,.marvel-device.iphone5s.silver .sleep{background:#d6d6d6}.marvel-device.iphone5s.silver .top-bar,.marvel-device.iphone5s.silver .bottom-bar{background:#eaebec}.marvel-device.iphone5s.silver .home{-webkit-box-shadow:inset 0 0 0 4px #bcbcbc;box-shadow:inset 0 0 0 4px #bcbcbc}.marvel-device.iphone5s.gold{background:#f9e7d3}.marvel-device.iphone5s.gold:before{background:#fcfcfc}.marvel-device.iphone5s.gold .volume,.marvel-device.iphone5s.gold .sleep{background:#f9e7d3}.marvel-device.iphone5s.gold .top-bar,.marvel-device.iphone5s.gold .bottom-bar{background:white}.marvel-device.iphone5s.gold .home{-webkit-box-shadow:inset 0 0 0 4px #f9e7d3;box-shadow:inset 0 0 0 4px #f9e7d3}.marvel-device.iphone5c{background:white;-webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,0.2);box-shadow:0 1px 2px 0 rgba(0,0,0,0.2)}.marvel-device.iphone5c .top-bar,.marvel-device.iphone5c .bottom-bar{display:none}.marvel-device.iphone5c .home{background:#242324;-moz-border-radius:36px;-webkit-border-radius:36px;border-radius:36px;width:68px;height:68px;z-index:3;position:absolute;left:50%;margin-left:-34px;bottom:19px}.marvel-device.iphone5c .home:after{width:20px;height:20px;border:1px solid rgba(255,255,255,0.1);-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;position:absolute;display:block;content:&#39;&#39;;top:50%;left:50%;margin-top:-11px;margin-left:-11px}.marvel-device.iphone5c.landscape .home{left:19px;bottom:50%;margin-bottom:-34px;margin-left:0px}.marvel-device.iphone5c .volume,.marvel-device.iphone5c .sleep{background:#dddddd}.marvel-device.iphone5c.red{background:#f96b6c}.marvel-device.iphone5c.red .volume,.marvel-device.iphone5c.red .sleep{background:#ed5758}.marvel-device.iphone5c.yellow{background:#f2dc60}.marvel-device.iphone5c.yellow .volume,.marvel-device.iphone5c.yellow .sleep{background:#e5ce4c}.marvel-device.iphone5c.green{background:#97e563}.marvel-device.iphone5c.green .volume,.marvel-device.iphone5c.green .sleep{background:#85d94d}.marvel-device.iphone5c.blue{background:#33a2db}.marvel-device.iphone5c.blue .volume,.marvel-device.iphone5c.blue .sleep{background:#2694cd}.marvel-device.iphone4s{padding:129px 27px;width:320px;height:480px;background:#686868;-webkit-border-radius:54px;border-radius:54px}.marvel-device.iphone4s:before{content:&#39;&#39;;width:calc(100% - 8px);height:calc(100% - 8px);position:absolute;top:4px;left:4px;z-index:1;-webkit-border-radius:50px;border-radius:50px;background:#1e1e1e}.marvel-device.iphone4s .top-bar{top:60px;position:absolute;left:0}.marvel-device.iphone4s .bottom-bar{bottom:90px;position:absolute;left:0}.marvel-device.iphone4s .camera{background:#3c3d3d;width:10px;height:10px;position:absolute;top:72px;left:134px;z-index:3;margin-left:-5px;-webkit-border-radius:100%;border-radius:100%}.marvel-device.iphone4s .speaker{background:#292728;width:64px;height:10px;position:absolute;top:72px;left:50%;z-index:3;margin-left:-32px;-webkit-border-radius:5px;border-radius:5px}.marvel-device.iphone4s .sensor{background:#292728;width:40px;height:10px;position:absolute;top:36px;left:50%;z-index:3;margin-left:-20px;-webkit-border-radius:5px;border-radius:5px}.marvel-device.iphone4s .home{background:#242324;-webkit-border-radius:100%;border-radius:100%;width:72px;height:72px;z-index:3;position:absolute;left:50%;margin-left:-36px;bottom:30px}.marvel-device.iphone4s .home:after{width:20px;height:20px;border:1px solid rgba(255,255,255,0.1);-webkit-border-radius:4px;border-radius:4px;position:absolute;display:block;content:&#39;&#39;;top:50%;left:50%;margin-top:-11px;margin-left:-11px}.marvel-device.iphone4s .sleep{position:absolute;top:-4px;right:60px;width:60px;height:4px;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px;background:#4D4D4D}.marvel-device.iphone4s .volume{position:absolute;left:-4px;top:160px;height:27px;width:4px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:#4D4D4D}.marvel-device.iphone4s .volume:before{position:absolute;left:0px;top:-70px;height:35px;width:4px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:inherit;content:&#39;&#39;;display:block}.marvel-device.iphone4s .volume:after{position:absolute;left:0px;bottom:-64px;height:27px;width:4px;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px;background:inherit;content:&#39;&#39;;display:block}.marvel-device.iphone4s.landscape{padding:27px 129px;height:320px;width:480px}.marvel-device.iphone4s.landscape .bottom-bar{left:90px;bottom:0px;height:100%;width:3px}.marvel-device.iphone4s.landscape .top-bar{left:calc(100% - 60px);top:0px;height:100%;width:3px}.marvel-device.iphone4s.landscape .camera{top:134px;left:calc(100% - 72px);margin-left:0}.marvel-device.iphone4s.landscape .speaker{top:50%;margin-left:0;margin-top:-32px;left:calc(100% - 72px);width:10px;height:64px}.marvel-device.iphone4s.landscape .sensor{height:40px;width:10px;left:calc(100% - 36px);top:50%;margin-left:0;margin-top:-20px}.marvel-device.iphone4s.landscape .home{left:30px;bottom:50%;margin-left:0;margin-bottom:-36px}.marvel-device.iphone4s.landscape .sleep{height:60px;width:4px;right:-4px;top:calc(100% - 120px);-webkit-border-radius:0px 2px 2px 0px;border-radius:0px 2px 2px 0px}.marvel-device.iphone4s.landscape .volume{top:-4px;left:calc(100% - 187px);height:4px;width:27px;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone4s.landscape .volume:before{right:-70px;left:auto;top:0px;width:35px;height:4px;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone4s.landscape .volume:after{width:27px;height:4px;bottom:0px;left:-64px;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.iphone4s.silver{background:#bcbcbc}.marvel-device.iphone4s.silver:before{background:#fcfcfc}.marvel-device.iphone4s.silver .home{background:#fcfcfc;-webkit-box-shadow:inset 0 0 0 1px #bcbcbc;box-shadow:inset 0 0 0 1px #bcbcbc}.marvel-device.iphone4s.silver .home:after{border:1px solid rgba(0,0,0,0.2)}.marvel-device.iphone4s.silver .volume,.marvel-device.iphone4s.silver .sleep{background:#d6d6d6}.marvel-device.nexus5{padding:50px 15px 50px 15px;width:320px;height:568px;background:#1e1e1e;-webkit-border-radius:20px;border-radius:20px}.marvel-device.nexus5:before{-webkit-border-radius:600px / 50px;border-radius:600px / 50px;background:inherit;content:&#39;&#39;;top:0;position:absolute;height:103.1%;width:calc(100% - 26px);top:50%;left:50%;-moz-transform:translateX(-50%) translateY(-50%);-webkit-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}.marvel-device.nexus5 .top-bar{width:calc(100% - 8px);height:calc(100% - 6px);position:absolute;top:3px;left:4px;-webkit-border-radius:20px;border-radius:20px;background:#181818}.marvel-device.nexus5 .top-bar:before{-webkit-border-radius:600px / 50px;border-radius:600px / 50px;background:inherit;content:&#39;&#39;;top:0;position:absolute;height:103.0%;width:calc(100% - 26px);top:50%;left:50%;-moz-transform:translateX(-50%) translateY(-50%);-webkit-transform:translateX(-50%) translateY(-50%);-o-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%)}.marvel-device.nexus5 .bottom-bar{display:none}.marvel-device.nexus5 .sleep{width:3px;position:absolute;left:-3px;top:110px;height:100px;background:inherit;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px}.marvel-device.nexus5 .volume{width:3px;position:absolute;right:-3px;top:70px;height:45px;background:inherit;-webkit-border-radius:0px 2px 2px 0px;border-radius:0px 2px 2px 0px}.marvel-device.nexus5 .camera{background:#3c3d3d;width:10px;height:10px;position:absolute;top:18px;left:50%;z-index:3;margin-left:-5px;-webkit-border-radius:100%;border-radius:100%}.marvel-device.nexus5 .camera:before{background:#3c3d3d;width:6px;height:6px;content:&#39;&#39;;display:block;position:absolute;top:2px;left:-100px;z-index:3;-webkit-border-radius:100%;border-radius:100%}.marvel-device.nexus5.landscape{padding:15px 50px 15px 50px;height:320px;width:568px}.marvel-device.nexus5.landscape:before{width:103.1%;height:calc(100% - 26px);-webkit-border-radius:50px / 600px;border-radius:50px / 600px}.marvel-device.nexus5.landscape .top-bar{left:3px;top:4px;height:calc(100% - 8px);width:calc(100% - 6px)}.marvel-device.nexus5.landscape .top-bar:before{width:103%;height:calc(100% - 26px);-webkit-border-radius:50px / 600px;border-radius:50px / 600px}.marvel-device.nexus5.landscape .sleep{height:3px;width:100px;left:calc(100% - 210px);top:-3px;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.nexus5.landscape .volume{height:3px;width:45px;right:70px;top:100%;-webkit-border-radius:0px 0px 2px 2px;border-radius:0px 0px 2px 2px}.marvel-device.nexus5.landscape .camera{top:50%;left:calc(100% - 18px);margin-left:0;margin-top:-5px}.marvel-device.nexus5.landscape .camera:before{top:-100px;left:2px}.marvel-device.s5{padding:60px 18px;-webkit-border-radius:42px;border-radius:42px;width:320px;height:568px;background:#bcbcbc}.marvel-device.s5:before,.marvel-device.s5:after{width:calc(100% - 52px);content:&#39;&#39;;display:block;height:26px;background:inherit;position:absolute;-webkit-border-radius:500px / 40px;border-radius:500px / 40px;left:50%;-moz-transform:translateX(-50%);-webkit-transform:translateX(-50%);-o-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}.marvel-device.s5:before{top:-7px}.marvel-device.s5:after{bottom:-7px}.marvel-device.s5 .bottom-bar{display:none}.marvel-device.s5 .top-bar{-webkit-border-radius:37px;border-radius:37px;width:calc(100% - 10px);height:calc(100% - 10px);top:5px;left:5px;background:radial-gradient(rgba(0,0,0,0.02) 20%, transparent 60%) 0 0,radial-gradient(rgba(0,0,0,0.02) 20%, transparent 60%) 3px 3px;background-color:white;background-size:4px 4px;background-position:center;z-index:2;position:absolute}.marvel-device.s5 .top-bar:before,.marvel-device.s5 .top-bar:after{width:calc(100% - 48px);content:&#39;&#39;;display:block;height:26px;background:inherit;position:absolute;-webkit-border-radius:500px / 40px;border-radius:500px / 40px;left:50%;-moz-transform:translateX(-50%);-webkit-transform:translateX(-50%);-o-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}.marvel-device.s5 .top-bar:before{top:-7px}.marvel-device.s5 .top-bar:after{bottom:-7px}.marvel-device.s5 .sleep{width:3px;position:absolute;left:-3px;top:100px;height:100px;background:#cecece;-webkit-border-radius:2px 0px 0px 2px;border-radius:2px 0px 0px 2px}.marvel-device.s5 .speaker{width:68px;height:8px;position:absolute;top:20px;display:block;z-index:3;left:50%;margin-left:-34px;background-color:#bcbcbc;background-position:top left;-webkit-border-radius:4px;border-radius:4px}.marvel-device.s5 .sensor{display:block;position:absolute;top:20px;right:110px;background:#3c3d3d;-moz-border-radius:100%;-webkit-border-radius:100%;border-radius:100%;width:8px;height:8px;z-index:3}.marvel-device.s5 .sensor:after{display:block;content:&#39;&#39;;position:absolute;top:0px;right:12px;background:#3c3d3d;-moz-border-radius:100%;-webkit-border-radius:100%;border-radius:100%;width:8px;height:8px;z-index:3}.marvel-device.s5 .camera{display:block;position:absolute;top:24px;right:42px;background:black;-moz-border-radius:100%;-webkit-border-radius:100%;border-radius:100%;width:10px;height:10px;z-index:3}.marvel-device.s5 .camera:before{width:4px;height:4px;background:#3c3d3d;-moz-border-radius:100%;-webkit-border-radius:100%;border-radius:100%;position:absolute;content:&#39;&#39;;top:50%;left:50%;margin-top:-2px;margin-left:-2px}.marvel-device.s5 .home{position:absolute;z-index:3;bottom:17px;left:50%;width:70px;height:20px;background:white;-webkit-border-radius:18px;border-radius:18px;display:block;margin-left:-35px;border:2px solid black}.marvel-device.s5.landscape{padding:18px 60px;height:320px;width:568px}.marvel-device.s5.landscape:before,.marvel-device.s5.landscape:after{height:calc(100% - 52px);width:26px;-webkit-border-radius:40px / 500px;border-radius:40px / 500px;-moz-transform:translateY(-50%);-webkit-transform:translateY(-50%);-o-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.marvel-device.s5.landscape:before{top:50%;left:-7px}.marvel-device.s5.landscape:after{top:50%;left:auto;right:-7px}.marvel-device.s5.landscape .top-bar:before,.marvel-device.s5.landscape .top-bar:after{width:26px;height:calc(100% - 48px);-webkit-border-radius:40px / 500px;border-radius:40px / 500px;-moz-transform:translateY(-50%);-webkit-transform:translateY(-50%);-o-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.marvel-device.s5.landscape .top-bar:before{right:-7px;top:50%;left:auto}.marvel-device.s5.landscape .top-bar:after{left:-7px;top:50%;right:auto}.marvel-device.s5.landscape .sleep{height:3px;width:100px;left:calc(100% - 200px);top:-3px;-webkit-border-radius:2px 2px 0px 0px;border-radius:2px 2px 0px 0px}.marvel-device.s5.landscape .speaker{height:68px;width:8px;left:calc(100% - 20px);top:50%;margin-left:0;margin-top:-34px}.marvel-device.s5.landscape .sensor{right:20px;top:calc(100% - 110px)}.marvel-device.s5.landscape .sensor:after{left:-12px;right:0px}.marvel-device.s5.landscape .camera{top:calc(100% - 42px);right:24px}.marvel-device.s5.landscape .home{width:20px;height:70px;bottom:50%;margin-bottom:-35px;margin-left:0;left:17px}.marvel-device.s5.black{background:#1e1e1e}.marvel-device.s5.black .speaker{background:black}.marvel-device.s5.black .sleep{background:#1e1e1e}.marvel-device.s5.black .top-bar{background:radial-gradient(rgba(0,0,0,0.05) 20%, transparent 60%) 0 0,radial-gradient(rgba(0,0,0,0.05) 20%, transparent 60%) 3px 3px;background-color:#2c2b2c;background-size:4px 4px}.marvel-device.s5.black .home{background:#2c2b2c}.marvel-device.lumia920{padding:80px 35px 125px 35px;background:#ffdd00;width:320px;height:533px;-moz-border-radius:40px / 3px;-webkit-border-radius:40px / 3px;border-radius:40px / 3px}.marvel-device.lumia920 .bottom-bar{display:none}.marvel-device.lumia920 .top-bar{width:calc(100% - 24px);height:calc(100% - 32px);position:absolute;top:16px;left:12px;-moz-border-radius:24px;-webkit-border-radius:24px;border-radius:24px;background:black;z-index:1}.marvel-device.lumia920 .top-bar:before{background:#1e1e1e;display:block;content:&#39;&#39;;width:calc(100% - 4px);height:calc(100% - 4px);top:2px;left:2px;position:absolute;-moz-border-radius:22px;-webkit-border-radius:22px;border-radius:22px}.marvel-device.lumia920 .volume{width:3px;position:absolute;top:130px;height:100px;background:#1e1e1e;right:-3px;-webkit-border-radius:0px 2px 2px 0px;border-radius:0px 2px 2px 0px}.marvel-device.lumia920 .volume:before{width:3px;position:absolute;top:190px;content:&#39;&#39;;display:block;height:50px;background:inherit;right:0px;-webkit-border-radius:0px 2px 2px 0px;border-radius:0px 2px 2px 0px}.marvel-device.lumia920 .volume:after{width:3px;position:absolute;top:460px;content:&#39;&#39;;display:block;height:50px;background:inherit;right:0px;-webkit-border-radius:0px 2px 2px 0px;border-radius:0px 2px 2px 0px}.marvel-device.lumia920 .camera{background:#3c3d3d;width:10px;height:10px;position:absolute;top:34px;right:130px;z-index:5;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}.marvel-device.lumia920 .speaker{background:#292728;width:64px;height:10px;position:absolute;top:38px;left:50%;margin-left:-32px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;z-index:3}.marvel-device.lumia920.landscape{padding:35px 80px 35px 125px;height:320px;width:568px;-moz-border-radius:2px / 100px;-webkit-border-radius:2px / 100px;border-radius:2px / 100px}.marvel-device.lumia920.landscape .top-bar{height:calc(100% - 24px);width:calc(100% - 32px);left:16px;top:12px}.marvel-device.lumia920.landscape .volume{height:3px;right:130px;width:100px;top:100%;-webkit-border-radius:0px 0px 2px 2px;border-radius:0px 0px 2px 2px}.marvel-device.lumia920.landscape .volume:before{height:3px;right:190px;top:0px;width:50px;-webkit-border-radius:0px 0px 2px 2px;border-radius:0px 0px 2px 2px}.marvel-device.lumia920.landscape .volume:after{height:3px;right:430px;top:0px;width:50px;-webkit-border-radius:0px 0px 2px 2px;border-radius:0px 0px 2px 2px}.marvel-device.lumia920.landscape .camera{right:30px;top:calc(100% - 140px)}.marvel-device.lumia920.landscape .speaker{width:10px;height:64px;top:50%;margin-left:0;margin-top:-32px;left:calc(100% - 48px)}.marvel-device.lumia920.black{background:black}.marvel-device.lumia920.white{background:white;-webkit-box-shadow:0 1px 2px 0 rgba(0,0,0,0.2);box-shadow:0 1px 2px 0 rgba(0,0,0,0.2)}.marvel-device.lumia920.blue{background:#00acdd}.marvel-device.lumia920.red{background:#CC3E32}.marvel-device.htc-one{padding:72px 25px 100px 25px;width:320px;height:568px;background:#bebebe;-webkit-border-radius:34px;border-radius:34px}.marvel-device.htc-one:before{content:&#39;&#39;;display:block;width:calc(100% - 4px);height:calc(100% - 4px);position:absolute;top:2px;left:2px;background:#adadad;-webkit-border-radius:32px;border-radius:32px}.marvel-device.htc-one:after{content:&#39;&#39;;display:block;width:calc(100% - 8px);height:calc(100% - 8px);position:absolute;top:4px;left:4px;background:#eeeeee;-webkit-border-radius:30px;border-radius:30px}.marvel-device.htc-one .top-bar{width:calc(100% - 4px);height:635px;position:absolute;background:#424242;top:50px;z-index:1;left:2px}.marvel-device.htc-one .top-bar:before{content:&#39;&#39;;position:absolute;width:calc(100% - 4px);height:100%;position:absolute;background:black;top:0px;z-index:1;left:2px}.marvel-device.htc-one .bottom-bar{display:none}.marvel-device.htc-one .speaker{height:16px;width:216px;display:block;position:absolute;top:22px;z-index:2;left:50%;margin-left:-108px;background:radial-gradient(#343434 25%, transparent 50%) 0 0,radial-gradient(#343434 25%, transparent 50%) 4px 4px;background-size:4px 4px;background-position:top left}.marvel-device.htc-one .speaker:after{content:&#39;&#39;;height:16px;width:216px;display:block;position:absolute;top:676px;z-index:2;left:50%;margin-left:-108px;background:inherit}.marvel-device.htc-one .camera{display:block;position:absolute;top:18px;right:38px;background:#3c3d3d;-moz-border-radius:100%;-webkit-border-radius:100%;border-radius:100%;width:24px;height:24px;z-index:3}.marvel-device.htc-one .camera:before{width:8px;height:8px;background:black;-moz-border-radius:100%;-webkit-border-radius:100%;border-radius:100%;position:absolute;content:&#39;&#39;;top:50%;left:50%;margin-top:-4px;margin-left:-4px}.marvel-device.htc-one .sensor{display:block;position:absolute;top:29px;left:60px;background:#3c3d3d;-moz-border-radius:100%;-webkit-border-radius:100%;border-radius:100%;width:8px;height:8px;z-index:3}.marvel-device.htc-one .sensor:after{display:block;content:&#39;&#39;;position:absolute;top:0px;right:12px;background:#3c3d3d;-moz-border-radius:100%;-webkit-border-radius:100%;border-radius:100%;width:8px;height:8px;z-index:3}.marvel-device.htc-one.landscape{padding:25px 72px 25px 100px;height:320px;width:568px}.marvel-device.htc-one.landscape .top-bar{height:calc(100% - 4px);width:635px;left:calc(100% - 685px);top:2px}.marvel-device.htc-one.landscape .speaker{width:16px;height:216px;left:calc(100% - 38px);top:50%;margin-left:0px;margin-top:-108px}.marvel-device.htc-one.landscape .speaker:after{width:16px;height:216px;left:calc(100% - 692px);top:50%;margin-left:0;margin-top:-108px}.marvel-device.htc-one.landscape .camera{right:18px;top:calc(100% - 38px)}.marvel-device.htc-one.landscape .sensor{left:calc(100% - 29px);top:60px}.marvel-device.htc-one.landscape .sensor :after{right:0;top:-12px}.marvel-device.ipad{width:576px;height:768px;padding:90px 25px;background:#242324;-webkit-border-radius:44px;border-radius:44px}.marvel-device.ipad:before{width:calc(100% - 8px);height:calc(100% - 8px);position:absolute;content:&#39;&#39;;display:block;top:4px;left:4px;-webkit-border-radius:40px;border-radius:40px;background:#1e1e1e}.marvel-device.ipad .camera{background:#3c3d3d;width:10px;height:10px;position:absolute;top:44px;left:50%;margin-left:-5px;-webkit-border-radius:100%;border-radius:100%}.marvel-device.ipad .top-bar,.marvel-device.ipad .bottom-bar{display:none}.marvel-device.ipad .home{background:#242324;-webkit-border-radius:36px;border-radius:36px;width:50px;height:50px;position:absolute;left:50%;margin-left:-25px;bottom:22px}.marvel-device.ipad .home:after{width:15px;height:15px;margin-top:-8px;margin-left:-8px;border:1px solid rgba(255,255,255,0.1);-webkit-border-radius:4px;border-radius:4px;position:absolute;display:block;content:&#39;&#39;;top:50%;left:50%}.marvel-device.ipad.landscape{height:576px;width:768px;padding:25px 90px}.marvel-device.ipad.landscape .camera{left:calc(100% - 44px);top:50%;margin-left:0;margin-top:-5px}.marvel-device.ipad.landscape .home{top:50%;left:22px;margin-left:0;margin-top:-25px}.marvel-device.ipad.silver{background:#bcbcbc}.marvel-device.ipad.silver:before{background:#fcfcfc}.marvel-device.ipad.silver .home{background:#fcfcfc;-webkit-box-shadow:inset 0 0 0 1px #bcbcbc;box-shadow:inset 0 0 0 1px #bcbcbc}.marvel-device.ipad.silver .home:after{border:1px solid rgba(0,0,0,0.2)}.marvel-device.macbook{width:960px;height:600px;padding:44px 44px 76px;margin:0 auto;background:#bebebe;-webkit-border-radius:34px;border-radius:34px}.marvel-device.macbook:before{width:calc(100% - 8px);height:calc(100% - 8px);position:absolute;content:&#39;&#39;;display:block;top:4px;left:4px;-webkit-border-radius:30px;border-radius:30px;background:#1e1e1e}.marvel-device.macbook .top-bar{width:calc(100% + 2 * 70px);height:40px;position:absolute;content:&#39;&#39;;display:block;top:680px;left:-70px;border-bottom-left-radius:90px 18px;border-bottom-right-radius:90px 18px;background:#bebebe;-webkit-box-shadow:inset 0px -4px 13px 3px rgba(34,34,34,0.6);-moz-box-shadow:inset 0px -4px 13px 3px rgba(34,34,34,0.6);box-shadow:inset 0px -4px 13px 3px rgba(34,34,34,0.6)}.marvel-device.macbook .top-bar:before{width:100%;height:24px;content:&#39;&#39;;display:block;top:0;left:0;background:#f0f0f0;border-bottom:2px solid #aaa;-webkit-border-radius:5px;border-radius:5px;position:relative}.marvel-device.macbook .top-bar:after{width:16%;height:14px;content:&#39;&#39;;display:block;top:0;background:#ddd;position:absolute;margin-left:auto;margin-right:auto;left:0;right:0;-webkit-border-radius:0 0 20px 20px;border-radius:0 0 20px 20px;-webkit-box-shadow:inset 0px -3px 10px #999;-moz-box-shadow:inset 0px -3px 10px #999;box-shadow:inset 0px -3px 10px #999}.marvel-device.macbook .bottom-bar{background:transparent;width:calc(100% + 2 * 70px);height:26px;position:absolute;content:&#39;&#39;;display:block;top:680px;left:-70px}.marvel-device.macbook .bottom-bar:before,.marvel-device.macbook .bottom-bar:after{height:calc(100% - 2px);width:80px;content:&#39;&#39;;display:block;top:0;position:absolute}.marvel-device.macbook .bottom-bar:before{left:0;background:#f0f0f0;background:-moz-linear-gradient(left, #747474 0%, #c3c3c3 5%, #ebebeb 14%, #979797 41%, #f0f0f0 80%, #f0f0f0 100%, #f0f0f0 100%);background:-webkit-gradient(linear, left top, right top, color-stop(0%, #747474), color-stop(5%, #c3c3c3), color-stop(14%, #ebebeb), color-stop(41%, #979797), color-stop(80%, #f0f0f0), color-stop(100%, #f0f0f0), color-stop(100%, #f0f0f0));background:-webkit-linear-gradient(left, #747474 0%, #c3c3c3 5%, #ebebeb 14%, #979797 41%, #f0f0f0 80%, #f0f0f0 100%, #f0f0f0 100%);background:-o-linear-gradient(left, #747474 0%, #c3c3c3 5%, #ebebeb 14%, #979797 41%, #f0f0f0 80%, #f0f0f0 100%, #f0f0f0 100%);background:-ms-linear-gradient(left, #747474 0%, #c3c3c3 5%, #ebebeb 14%, #979797 41%, #f0f0f0 80%, #f0f0f0 100%, #f0f0f0 100%);background:linear-gradient(to right, #747474 0%, #c3c3c3 5%, #ebebeb 14%, #979797 41%, #f0f0f0 80%, #f0f0f0 100%, #f0f0f0 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;#747474&#39;, endColorstr=&#39;#f0f0f0&#39;, GradientType=1)}.marvel-device.macbook .bottom-bar:after{right:0;background:#f0f0f0;background:-moz-linear-gradient(left, #f0f0f0 0%, #f0f0f0 0%, #f0f0f0 20%, #979797 59%, #ebebeb 86%, #c3c3c3 95%, #747474 100%);background:-webkit-gradient(linear, left top, right top, color-stop(0%, #f0f0f0), color-stop(0%, #f0f0f0), color-stop(20%, #f0f0f0), color-stop(59%, #979797), color-stop(86%, #ebebeb), color-stop(95%, #c3c3c3), color-stop(100%, #747474));background:-webkit-linear-gradient(left, #f0f0f0 0%, #f0f0f0 0%, #f0f0f0 20%, #979797 59%, #ebebeb 86%, #c3c3c3 95%, #747474 100%);background:-o-linear-gradient(left, #f0f0f0 0%, #f0f0f0 0%, #f0f0f0 20%, #979797 59%, #ebebeb 86%, #c3c3c3 95%, #747474 100%);background:-ms-linear-gradient(left, #f0f0f0 0%, #f0f0f0 0%, #f0f0f0 20%, #979797 59%, #ebebeb 86%, #c3c3c3 95%, #747474 100%);background:linear-gradient(to right, #f0f0f0 0%, #f0f0f0 0%, #f0f0f0 20%, #979797 59%, #ebebeb 86%, #c3c3c3 95%, #747474 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=&#39;#f0f0f0&#39;, endColorstr=&#39;#747474&#39;, GradientType=1)}.marvel-device.macbook .camera{background:#3c3d3d;width:10px;height:10px;position:absolute;top:20px;left:50%;margin-left:-5px;-webkit-border-radius:100%;border-radius:100%}.marvel-device.macbook .home{display:none}</td>
+      </tr>
+</table>
+
+  </div>
+
+</div>
+
+<button type="button" data-facebox="#jump-to-line" data-facebox-class="linejump" data-hotkey="l" class="d-none">Jump to Line</button>
+<div id="jump-to-line" style="display:none">
+  <!-- '"` --><!-- </textarea></xmp> --></option></form><form accept-charset="UTF-8" action="" class="js-jump-to-line-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <input class="form-control linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+    <button type="submit" class="btn">Go</button>
+</form></div>
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+
+
+
+    </div>
+  </div>
+
+  </div>
+
+      <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links float-right">
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact GitHub</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark" title="GitHub">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" version="1.1" viewBox="0 0 16 16" width="24"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2017 <span title="0.14253s from github-fe-235f48c.cp1-iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+  
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+    <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+    You can't perform that action at this time.
+  </div>
+
+
+    
+    <script crossorigin="anonymous" integrity="sha256-0ZLoD9NuEtMY0oxGaomY68qdIKFaOBIvme3+RGEqA0s=" src="https://assets-cdn.github.com/assets/frameworks-d192e80fd36e12d318d28c466a8998ebca9d20a15a38122f99edfe44612a034b.js"></script>
+    <script async="async" crossorigin="anonymous" integrity="sha256-Xy9NKiLux34bbWcH8ROLCkMBsmV02xh3B0UUD+GmcbA=" src="https://assets-cdn.github.com/assets/github-5f2f4d2a22eec77e1b6d6707f1138b0a4301b26574db18770745140fe1a671b0.js"></script>
+    
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" version="1.1" viewBox="0 0 12 16" width="12"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48z"/></svg>
+    </button>
+  </div>
+</div>
+
+
+  </body>
+</html>
+
