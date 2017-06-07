@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\EventSchedule;
 use Carbon\Carbon;
+use App\User;
+use Auth;
 
 class PageController extends Controller
 {
@@ -53,12 +55,22 @@ class PageController extends Controller
     	return view('pages.terminal');
     }
 
-    public function level1($flag,$level){
-        if(!(strcasecmp($flag,'true') && strcasecmp($level,'level2'))){
+    public function level2($flag){
+        if(!(strcasecmp($flag,'true'))){
+            User::where('id',Auth::user()->id)->update(['page_id'=>2,'timestamp'=>Carbon::now('Asia/Kolkata')]);
             return "This is level2";
         }
         else{
             return "nope, still at level1";
+        }
+    }
+
+    public function cmail(){
+        try{
+            return "Welcome to Cmail";
+        }
+        catch(Exception $e){
+
         }
     }
 

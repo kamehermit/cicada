@@ -20,7 +20,13 @@ Route::group(['middleware' => ['web','auth']],function(){
 	Route::get('dashboard',['as' => 'dashboard','uses' => 'PageController@dashboard']);	
 });
 
-Route::group(['prefix'=>'quest','middleware' => ['web','auth','time']], function(){
+Route::group(['prefix'=>'quest/{page_id}','middleware' => ['web','auth','time','track']], function(){
 	Route::get('terminal',['as' => 'terminal','uses' => 'PageController@terminal']);
-	Route::get('redirect/{flag}/{level}',['as'=>'level1','uses' => 'PageController@level1']);
+	Route::get('redirect/{flag}/level2',['uses' => 'PageController@level2']);
+	Route::get('cmail',['as' => 'cmail','uses' => 'PageController@cmail']);
+});
+
+Route::group(['prefix'=>'api','middleware' => ['web','auth','time']],function(){
+	Route::get('term-login',['uses'=>'AjaxController@term_login']);
+	Route::get('cmail-auth',['uses'=>'AjaxController@cmail_auth']);
 });

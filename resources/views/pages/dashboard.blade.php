@@ -86,7 +86,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="play-button">
-								<a href="{{ url('quest/terminal')}}" class="btn btn-lg btn-default btn-block">PLAY</a>	
+								<a href="{{ url('quest/1/terminal')}}" class="btn btn-lg btn-default btn-block">PLAY</a>	
 							</div>
 						</div>
 					</div>

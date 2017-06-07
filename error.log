@@ -1,0 +1,2 @@
+2017/06/06 18:16:43 [error] 19096#19096: *3 open() "/srv/http/cicada/public/images/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: cicada.dev, request: "GET /images/favicon.ico HTTP/1.1", host: "cicada.dev"
+2017/06/06 20:34:12 [error] 19096#19096: *66 open() "/srv/http/cicada/public/images/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: cicada.dev, request: "GET /images/favicon.ico HTTP/1.1", host: "cicada.dev"

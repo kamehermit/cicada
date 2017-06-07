@@ -15,7 +15,7 @@ class CreateBanUsersTable extends Migration
         Schema::create('ban_users', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->dateTime('ban_time');
+            $table->dateTime('timestamp');
             $table->timestamps();
         });
         Schema::table('ban_users', function($table){

@@ -1,4 +1,13 @@
-<html> 
+<html>
+<!--
+########################### HINTS ###########################
+#                                                           #
+#                                                           #
+#         no hints in the source code for this level        #
+#                                                           #
+#                                                           #
+#############################################################
+--> 
 <head> 
 <title>Cicada</title> 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
@@ -33,9 +42,9 @@
   input{
     font-family: courier, monospace;
     font-size:14px;
-    background-color: black;
+    background-color: transparent;
     color: white;
-    border-color: black;
+    border-color: transparent;
   }
 
   a {
@@ -231,18 +240,49 @@ function addInputTerminal(){
 
 function login(username_entered, password_entered){
   //TODO: verify username_entered, password_entered via AJAX and remove following hardcoded code and call loginSuccess() or loginFailure() accordingly.
-  var URL = ""
+  var data = {'username':username_entered,'password':password_entered }
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+    }
+  });
+  $.ajax({
+    url: "{{ url('/api/term-login')}}",
+    method: 'POST',
+    data: data,
+    success: function(response) {
+      console.log(response);
+      if(response.status_code == '200'){
+        loginSuccess(response.data);  
+      }
+      else{
+        loginFailure();    
+      }
+      
+      //console.log($("#document_name").val());
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+           console.log(xhr.status);
+           console.log(xhr.responseText);
+           console.log(thrownError);
+
+       }
+  });
+
+  /*var URL = ""
   if(username_entered=="neo" && password_entered=="reeves"){
     loginSuccess(URL);
   }
   else{
     loginFailure();
   }
+  */
 }
 
 function loginSuccess(URL){
   
   addLoginSuccessTerminal();
+  window.location.href = URL;
   //TODO: redirect to next level URL
 }
 

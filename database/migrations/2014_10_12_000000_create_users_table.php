@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('facebook_id')->unique();
             $table->string('avatar');
             $table->integer('page_id')->unsigned()->nullable();
-            $table->dateTime('progress_time');
+            $table->dateTime('timestamp');
             $table->rememberToken();
             $table->timestamps();
         });

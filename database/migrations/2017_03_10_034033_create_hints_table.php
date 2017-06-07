@@ -14,6 +14,7 @@ class CreateHintsTable extends Migration
     {
         Schema::create('hints', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('hints');
             $table->timestamps();
         });
     }
