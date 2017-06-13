@@ -14,16 +14,17 @@
 Route::get('/',['as' => 'index','uses' => 'PageController@index']);
 Route::get('auth/facebook', 'AuthController@redirect');
 Route::get('auth/facebook/callback', 'AuthController@callback');
-Route::get('test','PageController@test');
 
 Route::group(['middleware' => ['web','auth']],function(){
-	Route::get('dashboard',['as' => 'dashboard','uses' => 'PageController@dashboard']);	
+	Route::get('dashboard',['as' => 'dashboard','uses' => 'PageController@dashboard']);
+	Route::get('notlevel2',['as'=>'notlevel2','uses' => 'PageController@notlevel2']);	
 });
 
 Route::group(['prefix'=>'quest/{page_id}','middleware' => ['web','auth','time','track']], function(){
 	Route::get('terminal',['as' => 'terminal','uses' => 'PageController@terminal']);
-	Route::get('redirect/{flag}/level2',['uses' => 'PageController@level2']);
+	Route::get('redirect/{flag}/{level}',['uses' => 'PageController@level2']);
 	Route::get('cmail',['as' => 'cmail','uses' => 'PageController@cmail']);
+
 });
 
 Route::group(['prefix'=>'api','middleware' => ['web','auth','time']],function(){

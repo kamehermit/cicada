@@ -22,10 +22,27 @@ class TrackUserMiddleware
         $id = User::where('id',\Auth::user()->id)->get(['page_id'])->first();
         $page_id = intval($request->page_id);
         $flag = $request->flag;
+        $level = $request->level;
         if(!(strcasecmp($flag,'true'))){
-            User::where('id',Auth::user()->id)->update(['page_id'=>2,'timestamp'=>Carbon::now('Asia/Kolkata')]);
-            $url = Page::where('id',intval($id->page_id)+1)->get(['url'])->first();
-            return redirect($url->url);
+            if(!(strcasecmp($level,'level3'))){
+                User::where('id',Auth::user()->id)->update(['page_id'=>2,'timestamp'=>Carbon::now('Asia/Kolkata')]);
+                $url = Page::where('id',intval($id->page_id)+1)->get(['url'])->first();
+                return redirect($url->url);    
+            }
+            else{
+                return \Redirect::route('notlevel2');
+            }   
+        }
+        if(!(strcasecmp($level,'level3'))){
+            if(!(strcasecmp($flag,'true'))){
+                User::where('id',Auth::user()->id)->update(['page_id'=>2,'timestamp'=>Carbon::now('Asia/Kolkata')]);
+                $url = Page::where('id',intval($id->page_id)+1)->get(['url'])->first();
+                return redirect($url->url);    
+            }
+            else{
+                return \Redirect::route('notlevel2');
+            }
+            
         }
         if(intval($id->page_id) != $page_id-1){
             $url = Page::where('id',intval($id->page_id)+1)->get(['url'])->first();

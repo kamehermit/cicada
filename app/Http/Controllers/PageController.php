@@ -13,78 +13,63 @@ use Auth;
 class PageController extends Controller
 {
     public function index(){
-        $data = EventSchedule::get()->first();
-        $start_time = Carbon::createFromFormat('Y-m-d H:i:s', $data->start, 'Asia/Kolkata');
-        $end_time = Carbon::createFromFormat('Y-m-d H:i:s', $data->end, 'Asia/Kolkata');
-        $cur_time = Carbon::now('Asia/Kolkata');
-        if($cur_time->lt($start_time) || $cur_time->gte($end_time)){
-            $date = $start_time->format('Y-m-d');
-            $time = $start_time->format('H:i:s');
-            $start = $date."T".$time;
-            return view('pages.index',['start_time'=>$start,'tagline'=>'The Tech Hunt will start in...']);
-        }
-        else{
-            $date = $end_time->format('Y-m-d');
-            $time = $end_time->format('H:i:s');
-            $end = $date."T".$time;
-            return view('pages.index',['start_time'=>$end,'tagline'=>'The Tech Hunt will end in...']);
-        }
+        list($time,$tagline) = $this->get_time_tagline();
+        return view('pages.index',['start_time'=>$time,'tagline'=>$tagline]);
     }
 
     public function dashboard(){
-        $data = EventSchedule::get()->first();
-        $start_time = Carbon::createFromFormat('Y-m-d H:i:s', $data->start, 'Asia/Kolkata');
-        $end_time = Carbon::createFromFormat('Y-m-d H:i:s', $data->end, 'Asia/Kolkata');
-        $cur_time = Carbon::now('Asia/Kolkata');
-        if($cur_time->lt($start_time) || $cur_time->gte($end_time)){
-            $date = $start_time->format('Y-m-d');
-            $time = $start_time->format('H:i:s');
-            $start = $date."T".$time;
-            return view('pages.dashboard',['start_time'=>$start,'tagline'=>'...untill the Tech Hunt begins']);
-        }
-        else{
-            $date = $end_time->format('Y-m-d');
-            $time = $end_time->format('H:i:s');
-            $end = $date."T".$time;
-            return view('pages.dashboard',['start_time'=>$end,'tagline'=>'...untill the Tech Hunt ends']);
-        }
-    	return view('pages.dashboard');
+        list($time,$tagline) = $this->get_time_tagline();
+        return view('pages.dashboard',['start_time'=>$time,'tagline'=>$tagline]);
     }
 
     public function terminal(){
     	return view('pages.terminal');
     }
 
-    public function level2($flag){
-        if(!(strcasecmp($flag,'true'))){
-            User::where('id',Auth::user()->id)->update(['page_id'=>2,'timestamp'=>Carbon::now('Asia/Kolkata')]);
-            return "This is level2";
-        }
-        else{
-            return "nope, still at level1";
-        }
+    public function level2(){
+        list($time,$tagline) = $this->get_time_tagline();
+        return view('pages.redirect',['start_time'=>$time,'tagline'=>$tagline]);
     }
 
     public function cmail(){
+        list($time,$tagline) = $this->get_time_tagline();
+        return view('pages.cmail',['start_time'=>$time,'tagline'=>$tagline]);
+    }
+
+    public function notlevel2(){
+        return "trolololololol";
+    }
+
+    public function get_time_tagline(){
         try{
-            return "Welcome to Cmail";
+            $data = EventSchedule::get()->first();
+            $start_time = Carbon::createFromFormat('Y-m-d H:i:s', $data->start, 'Asia/Kolkata');
+            $end_time = Carbon::createFromFormat('Y-m-d H:i:s', $data->end, 'Asia/Kolkata');
+            $cur_time = Carbon::now('Asia/Kolkata');
+            if($cur_time->lt($start_time) || $cur_time->gte($end_time)){
+                $date = $start_time->format('Y-m-d');
+                $time = $start_time->format('H:i:s');
+                $start = $date."T".$time;
+                $tagline = 'The Tech Hunt will start in...';
+                return array($start,$tagline);
+            }
+            else{
+                $date = $end_time->format('Y-m-d');
+                $time = $end_time->format('H:i:s');
+                $end = $date."T".$time;
+                $tagline = 'The Tech Hunt will end in...';
+                return array($end,$tagline);
+            }
         }
         catch(Exception $e){
-
+            $cur_time = Carbon::now('Asia/Kolkata');
+            $tagline = 'An error occured...';
+            $date = $cur_time->format('Y-m-d');
+            $time = $cur_time->format('H:i:s');
+            $end = $date."T".$time;
+            return array($end,$tagline);
         }
+        
     }
 
-    public function test(){
-    	//date_default_timezone_set('Asia/Kolkata');
-    	$data = EventSchedule::get()->first();
-    	$event_time = Carbon::createFromFormat('Y-m-d H:i:s', $data->start, 'Asia/Kolkata');
-    	$cur_time = Carbon::now('Asia/Kolkata');
-    if($cur_time->gte($event_time)){
-    		return "plata";
-    	}else{
-    		return "plomo";
-    	}
-        return response()->json(['cur_date'=>$cur_time,'event_date'=>$event_time]);
-
-    }
 }

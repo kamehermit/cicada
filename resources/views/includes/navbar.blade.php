@@ -8,12 +8,12 @@
 	        	<span class="icon-bar"></span>
 	      	</button>
 	      	<a class="navbar-brand" href="http://convoke.io">
-	      		<img src="images/logo.png" class="navbar-brand-logo img-responsive">
+	      		<img src="{{ URL::asset('images/logo.png') }}" class="navbar-brand-logo img-responsive">
 	      	</a>
 	    	</div>
 	    	<div class="collapse navbar-collapse" id="navbar">
 	      		<ul class="nav navbar-nav navbar-right">
-	        		<li><a href="#" ><span class="glyphicon glyphicon-list-alt"></span> Leaderboard</a></li>
+	        		<li><a href="{{ url('/dashboard') }}" ><span class="glyphicon glyphicon-list-alt"></span> Leaderboard</a></li>
 	        		<li><a href="#" ><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
 	      		</ul>
 	    	</div>
