@@ -106,7 +106,7 @@
 				</div>	
 			</div>
 		</div> -->
-		<iframe src="{{ URL::asset('html/index2.html') }}" height="100%" width="100%" ></iframe>
+		<iframe src="{{ URL::asset('html/index2.html') }}" height="100%" width="100%" frameBorder="0"></iframe>
 		<button type="button" class="btn btn-danger leftbtn badge1" data-badge="" data-toggle="modal" data-target="#myModal" onclick="scrollMessagesBottomPre()">
 						Live Hints
 					</button>
@@ -172,7 +172,7 @@
 	var differenceTriggered = 0;
 	
 	function updateFeed(){
-		console.log('entered updatefeed function');
+		//console.log('entered updatefeed function');
 	$.ajax({
 	url: 'http://139.59.34.126/cicada_updates.php',
 	type: 'GET',

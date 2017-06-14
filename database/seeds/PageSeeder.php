@@ -14,7 +14,8 @@ class PageSeeder extends Seeder
         $data = array(
         	['title' => 'terminal','name' => 'terminal','url' => '/quest/1/terminal'],
         	['title' => 'level2','name' => 'level2', 'url' => '/quest/2/redirect/false/level2'],
-            ['title' => 'cmail','name' => 'cmail','url' => '/quest/3/cmail']
+            ['title' => 'cmail','name' => 'cmail','url' => '/quest/3/cmail'],
+            ['title' => 'inbox','name' => 'inbox','url' => '/quest/4/cmail/inbox']
         );
         DB::table('pages')->insert($data);
     }

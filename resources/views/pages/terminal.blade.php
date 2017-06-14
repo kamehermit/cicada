@@ -66,6 +66,7 @@
 </style> 
 </head> 
 <body> 
+<meta name="_token" content="{{ csrf_token() }}">
 <script type="text/javascript"> 
   var Typer={
   text: "<span id=\"a\">cicada@convoke</span>:<span id=\"b\">~/Documents</span><span id=\"c\">$</span> cat story.txt<br/><br/>Welcome to <a href=\"https://en.wikipedia.org/wiki/Cicada_3301\" target=\"_blank\">Cicada</a>: The enigmatic online tech hunt and a part of <a href=\"http://www.convoke.io\" target=\"_blank\">CONVOKE</a>, the annual technical fest of <a href=\"https://www.ducic.ac.in\" target=\"_blank\">CLUSTER INNOVATION CENTRE</a>, Delhi University.<p> Hello neo, <br> (FBI Agent ID: reeves) <br> Sentinel (case file name) committed his first murders in 1996, strangling four guests at the Savoy Hotel but was never caught and identified. There are talks in the wind that he has recently resurfaced and is preparing for his next big crime, leaving the FBI in a state of utter chaos. As a top level agent of the organisation, you have been assigned to this case. You must identify the killer before you are destined to the same fate as the previous agents who became victims of the infamous psychopath. </p> <p> But first, you must gain access to your sat phone using your credentials.</p> <p> Type \'<span id=\"c\">help</span>\' to see a list of available commands..",
@@ -240,7 +241,7 @@ function addInputTerminal(){
 
 function login(username_entered, password_entered){
   //TODO: verify username_entered, password_entered via AJAX and remove following hardcoded code and call loginSuccess() or loginFailure() accordingly.
-  var data = {'username':username_entered,'password':password_entered }
+  var data = {'_token': "{{ csrf_token() }}",'username':username_entered,'password':password_entered }
   $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
@@ -248,7 +249,7 @@ function login(username_entered, password_entered){
   });
   $.ajax({
     url: "{{ url('/api/term-login')}}",
-    method: 'POST',
+    type: 'POST',
     data: data,
     success: function(response) {
       console.log(response);

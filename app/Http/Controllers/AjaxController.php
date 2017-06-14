@@ -44,8 +44,29 @@ class AjaxController extends Controller
     }
 
     public function cmail_auth(Request $request){
+        $uname = 'admin';
+        $pwd = 'adacic';
+        $data = $request->only('username','password');
+        $aurl = Page::where('id',4)->get(['url'])->first();
+        $url = 'http://cicada.dev'.$aurl->url;
     	try{
-
+            if(strcasecmp($data['username'],$uname) || strcasecmp($data['password'], $pwd)){
+                return response()->json([
+                    'status' => 'Unauthorized',
+                    'status_code' => '401',
+                    'message' => 'Wrong Credentials',
+                    'data' => 'null'
+                    ]);
+            }
+            else{
+                User::where('id',Auth::user()->id)->update(['page_id'=>3,'timestamp'=>Carbon::now('Asia/Kolkata')]);
+                return response()->json([
+                    'status' => 'success',
+                    'status_code' => '200',
+                    'message' => 'Login Successful',
+                    'data' => $url
+                    ]);
+            }
     	}
     	catch(Exception $e){
     		

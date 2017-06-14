@@ -40,6 +40,11 @@ class PageController extends Controller
         return "trolololololol";
     }
 
+    public function inbox(){
+        list($time,$tagline) = $this->get_time_tagline();
+        return view('pages.inbox',['start_time'=>$time,'tagline'=>$tagline]);
+    }
+
     public function get_time_tagline(){
         try{
             $data = EventSchedule::get()->first();
