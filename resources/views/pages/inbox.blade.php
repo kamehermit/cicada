@@ -21,6 +21,68 @@
 
 
 @section('content')
+	<!--Intro-->
+	<div>
+	<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Bangers');
+		    #intro {
+		      position: fixed;
+		      display: none;
+		      width: 100%;
+		      height: 100%;
+		      top: 0;
+		      left: 0;
+		      right: 0;
+		      bottom: 0;
+		      background-color: #fff;
+		      z-index: 2;
+		      cursor: pointer;
+		    }
+		    .story-board{
+		    	margin: 50px 35px;
+		    	padding: 40px 30px; 
+		    }
+		    #intro .story-board .text{
+		    	font-family: 'Bangers', cursive;
+		    	font-size: 23px;
+		    	margin: 10px;
+		    	padding: 10px;
+
+		    }
+		    .story-board .box{
+		    	border-style: solid;
+    			border-width: 5px;
+    			margin: 10px;
+		    }
+		    .story-board .next-btn button{
+		    	background-color: white;
+				padding: 5px;
+				border-color: #333;  
+		    	border-style: solid;
+    			border-width: 5px;
+    			font-family: 'Bangers', cursive;
+		    	font-size: 23px;
+		    }
+		</style>
+		<div id="intro">
+			
+		</div> 
+		<script type="text/javascript">
+				document.getElementById("intro").style.display = "block";
+		    function close_intro(){
+		      $("#intro").fadeOut();
+		    }
+		    $(document).ready(function() {
+		    	//$(window).load(function() {
+			      $('#intro').html('<div class="story-board"><div class="row"><div class="col-md-4"><div class="text"><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla, mauris in ultrices blandit, lectus nisi vehicula velit, quis dictum urna dui at nisi. Proin nunc odio, molestie vel sapien eget, pulvinar cursus velit. Nulla facilisi.</p>					<p>Nunc sagittis non sapien eu semper. Quisque at euismod lacus. Nullam viverra nulla a libero commodo lobortis dapibus in mi. Nulla facilisi. Sed id tortor pretium, pulvinar tellus sit amet, dictum justo. </p>				</div>	    		</div>	    		<div class="col-md-4">	    			<div class="box">	    				<br><br><Br><br><br><Br><Br><Br><br>	    				<br><br><Br><br><br><Br><Br><Br><br>	    				<br>	    			</div>	    		</div>	    		<div class="col-md-4">	    			<div class="row">	    				<div class="col-md-12">	    				<div class="box">	    						<br><br><Br><br><br><Br><Br><Br><br>	    					</div>	    				</div>	    			</div>	    		<div class="row">	    				<div class="col-md-12">	    				<div class="box">	    						<br><br><Br><br><br><Br><Br><Br><br>	    					</div>	    				</div>	    			</div>		    		</div>	    	</div>	    	<br>	    	<div class="row">	    		<div class="col-md-12">	    			<div class="next-btn" align="center">	    			<button onclick="close_intro()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEXT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>	    			</div>	    		</div>	    	</div>	    	</div>');
+		    	//});
+			});
+		</script>
+		
+	</div>
+
+
+
 	<!--countdown-->
 	<div class="header">
 		<div class="container-fluid">
@@ -106,7 +168,7 @@
 				</div>	
 			</div>
 		</div> -->
-		<iframe src="{{ URL::asset('html/inbox.html') }}" height="100%" width="100%" frameBorder="0"></iframe>
+	<iframe src="{{ URL::asset('html/inbox.html') }}" height="100%" width="100%" frameBorder="0"></iframe>
 		<button type="button" class="btn btn-danger leftbtn badge1" data-badge="" data-toggle="modal" data-target="#myModal" onclick="scrollMessagesBottomPre()">
 						Live Hints
 					</button>

@@ -65,7 +65,8 @@
 }
 </style> 
 </head> 
-<body> 
+<body>
+  
 <meta name="_token" content="{{ csrf_token() }}">
 <script type="text/javascript"> 
   var Typer={
