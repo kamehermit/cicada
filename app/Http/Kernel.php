@@ -51,5 +51,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'time' => \App\Http\Middleware\EventTimeMiddleware::class,
         'track' => \App\Http\Middleware\TrackUserMiddleware::class,
+        'ban' => \App\Http\Middleware\BanUserMiddleware::class,
     ];
 }

@@ -20,11 +20,12 @@ Route::group(['middleware' => ['auth']],function(){
 	Route::get('notlevel2',['as'=>'notlevel2','uses' => 'PageController@notlevel2']);	
 });
 
-Route::group(['prefix'=>'quest/{page_id}','middleware' => ['auth','time','track']], function(){
+Route::group(['prefix'=>'quest/{page_id}','middleware' => ['auth','time','track','ban']], function(){
 	Route::get('terminal',['as' => 'terminal','uses' => 'PageController@terminal']);
 	Route::get('redirect/{flag}/{level}',['uses' => 'PageController@level2']);
 	Route::get('cmail',['as' => 'cmail','uses' => 'PageController@cmail']);
 	Route::get('cmail/inbox',['as'=>'inbox','uses'=>'PageController@inbox']);
+	Route::get('hotel-reservation-efr92h48e',['as'=>'hotel-reservation','uses'=>'PageController@hotel_reservation']);
 
 });
 

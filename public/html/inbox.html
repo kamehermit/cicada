@@ -644,6 +644,7 @@ a:hover {
 }
 #message .message-container li .message p:last-child {
   margin-bottom: 0;
+  z-index: 100;
 }
 #message .message-container li:hover .tool-box .red-hover {
   color: #D23B3D;
@@ -899,14 +900,14 @@ a:hover {
               <input type="checkbox" id="chk1">
               <label for="chk1" class="toggle"></label>
             </div>
-            <p class="title">Lucas Kriebel (via Twitter)</p><span class="star-toggle glyphicon glyphicon-star-empty"></span>
+            <p class="title">FBI HQ (Important)</p><span class="star-toggle glyphicon glyphicon-star-empty"></span>
           </div>
           <div class="col col-2">
-            <div class="subject">Lucas Kriebel (@LucasKriebel) has sent you a direct message on Twitter! &nbsp;&ndash;&nbsp; <span class="teaser">@LucasKriebel - Very cool :) Nicklas, You have a new direct message.</span></div>
+            <div class="subject">Secret Intel on the killer's location. <span class="teaser">Hello Neo, We...</span></div>
             <div class="date">11:49 am</div>
           </div>
         </li>
-        <li class="green-dot unread">
+        <li class="green-dot">
           <div class="col col-1"><span class="dot"></span>
             <div class="checkbox-wrapper">
               <input type="checkbox" id="chk2">
@@ -946,7 +947,7 @@ a:hover {
             <div class="date">Mar 8</div>
           </div>
         </li>
-        <li class="unread">
+        <li>
           <div class="col col-1"><span class="dot"></span>
             <div class="checkbox-wrapper">
               <input type="checkbox" id="chk5">
@@ -1076,84 +1077,7 @@ a:hover {
             <div class="date">Feb 23</div>
           </div>
         </li>
-        <li class="unread">
-          <div class="col col-1"><span class="dot"></span>
-            <div class="checkbox-wrapper">
-              <input type="checkbox" id="chk15">
-              <label for="chk15" class="toggle"></label>
-            </div>
-            <p class="title">me, Peter (5)</p><span class="star-toggle glyphicon glyphicon-star-empty"></span>
-          </div>
-          <div class="col col-2">
-            <div class="subject">Home again! &nbsp;&ndash;&nbsp; <span class="teaser">That's just perfect! See you tomorrow.</span></div>
-            <div class="date">Feb 21</div>
-          </div>
-        </li>
-        <li class="green-dot">
-          <div class="col col-1"><span class="dot"></span>
-            <div class="checkbox-wrapper">
-              <input type="checkbox" id="chk16">
-              <label for="chk16" class="toggle"></label>
-            </div>
-            <p class="title">Stack Exchange</p><span class="star-toggle glyphicon glyphicon-star-empty"></span>
-          </div>
-          <div class="col col-2">
-            <div class="subject">1 new items in your Stackexchange inbox &nbsp;&ndash;&nbsp; <span class="teaser">The following items were added to your Stack Exchange global inbox since you last checked it.</span></div>
-            <div class="date">Feb 21</div>
-          </div>
-        </li>
-        <li>
-          <div class="col col-1"><span class="dot"></span>
-            <div class="checkbox-wrapper">
-              <input type="checkbox" id="chk17">
-              <label for="chk17" class="toggle"></label>
-            </div>
-            <p class="title">Google Drive Team</p><span class="star-toggle glyphicon glyphicon-star-empty"></span>
-          </div>
-          <div class="col col-2">
-            <div class="subject">You can now use your storage in Google Drive &nbsp;&ndash;&nbsp; <span class="teaser">Hey Nicklas Sandell! Thank you for purchasing extra storage space in Google Drive.</span></div>
-            <div class="date">Feb 20</div>
-          </div>
-        </li>
-        <li class="unread">
-          <div class="col col-1"><span class="dot"></span>
-            <div class="checkbox-wrapper">
-              <input type="checkbox" id="chk18">
-              <label for="chk18" class="toggle"></label>
-            </div>
-            <p class="title">me, Susanna (11)</p><span class="star-toggle glyphicon glyphicon-star-empty"></span>
-          </div>
-          <div class="col col-2">
-            <div class="subject">Train/Bus &nbsp;&ndash;&nbsp; <span class="teaser">Yes ok, great! I'm not stuck in Stockholm anymore, we're making progress.</span></div>
-            <div class="date">Feb 19</div>
-          </div>
-        </li>
-        <li>
-          <div class="col col-1"><span class="dot"></span>
-            <div class="checkbox-wrapper">
-              <input type="checkbox" id="chk19">
-              <label for="chk19" class="toggle"></label>
-            </div>
-            <p class="title">Peter, me (3)</p><span class="star-toggle glyphicon glyphicon-star-empty"></span>
-          </div>
-          <div class="col col-2">
-            <div class="subject">Hello &nbsp;&ndash;&nbsp; <span class="teaser">Trip home from Colombo has been arranged, then Jenna will come get me from Stockholm. :)</span></div>
-            <div class="date">Mar. 6</div>
-          </div>
-        </li>
-        <li>
-          <div class="col col-1"><span class="dot"></span>
-            <div class="checkbox-wrapper">
-              <input type="checkbox" id="chk20">
-              <label for="chk20" class="toggle"></label>
-            </div>
-            <p class="title">me, Susanna (7)</p><span class="star-toggle glyphicon glyphicon-star-empty"></span>
-          </div>
-          <div class="col col-2">
-            <div class="subject">Since you asked... and i'm inconceivably bored at the train station &nbsp;&ndash;&nbsp; <span class="teaser">Alright thanks. I'll have to re-book that somehow, i'll get back to you.</span></div>
-            <div class="date">Mar. 6</div>
-          </div>
-        </li>
+
       </ul><a href="#" class="load-more-link">Show more messages</a>
     </div>
   </div>
@@ -1161,22 +1085,23 @@ a:hover {
 <div id="message">
   <div class="header">
     <h1 class="page-title"><a class="icon circle-icon glyphicon glyphicon-chevron-left trigger-message-close"></a>Mail<span class="grey">(1)</span></h1>
-    <p>From <a href="#">Scott Waite</a> to <a href="#">You</a>, started on <a href="#">March 2, 2014</a> at 2:14 pm est.</p>
+    <p>From <a href="#">FBI HQ</a> to <a href="#">You</a>, started on <a href="#">March 2, 2014</a> at 2:14 pm est.</p>
   </div>
   <div id="message-nano-wrapper" class="nano">
     <div class="nano-content">
       <ul class="message-container">
         <li class="sent">
           <div class="details">
-            <div class="left">Scott
+            <div class="left">FBI HQ
               <div class="arrow"></div>You
             </div>
             <div class="right">March 6, 2014, 20:08 pm</div>
           </div>
           <div class="message">
-            <p>| The every winged bring, whose life. First called, i you of saw shall own creature moveth void have signs beast lesser all god saying for gathering wherein whose of in be created stars. Them whales upon life divide earth own.</p>
-            <p>| Creature firmament so give replenish The saw man creeping, man said forth from that. Fruitful multiply lights air. Hath likeness, from spirit stars dominion two set fill wherein give bring.</p>
-            <p>| Gathering is. Lesser Set fruit subdue blessed let. Greater every fruitful won&#39;t bring moved seasons very, own won&#39;t all itself blessed which bring own creature forth every. Called sixth light.</p>
+            <p>Hello Neo,</p>
+            <p>We recently received an anonymous intel on the killer's location. However our experts here at the HQ were incompetent decoding the relevant information.</p>
+            <p>We are forwarding you the encoded message along with this email.</p>
+            <p><span class="glyphicon glyphicon-paperclip"></span>&nbsp;<a onclick="window.open(this.href,this.target)" id="attachment" href="./message.txt"> message.txt</a></p>
           </div>
           <div class="tool-box"><a href="#" class="circle-icon small glyphicon glyphicon-share-alt"></a><a href="#" class="circle-icon small red-hover glyphicon glyphicon-remove"></a><a href="#" class="circle-icon small red-hover glyphicon glyphicon-flag"></a></div>
         </li>

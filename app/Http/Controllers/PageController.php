@@ -45,6 +45,12 @@ class PageController extends Controller
         return view('pages.inbox',['start_time'=>$time,'tagline'=>$tagline]);
     }
 
+    
+    public function hotel_reservation(){
+        list($time,$tagline) = $this->get_time_tagline();
+        return view('pages.hotel',['start_time'=>$time,'tagline'=>$tagline]);
+    }
+
     public function get_time_tagline(){
         try{
             $data = EventSchedule::get()->first();
