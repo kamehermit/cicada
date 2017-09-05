@@ -17,7 +17,8 @@ class PageSeeder extends Seeder
             ['title' => 'cmail','name' => 'cmail','url' => '/quest/3/cmail'],
             ['title' => 'inbox','name' => 'inbox','url' => '/quest/4/cmail/inbox'],
             ['title' => 'hotel-reservation','name' => 'hotel reservation','url' => '/quest/5/hotel-reservation'],
-            ['title' => 'navigation','name' => 'navigation','url' => '/quest/6/navigation']
+            ['title' => 'navigation','name' => 'navigation','url' => '/quest/6/navigation'],
+            ['title' => 'doors','name' => 'doors','url'=>'/quest/7/doors']
         );
         DB::table('pages')->insert($data);
     }

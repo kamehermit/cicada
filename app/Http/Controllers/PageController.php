@@ -56,6 +56,11 @@ class PageController extends Controller
         return view('pages.navigation',['start_time'=>$time,'tagline'=>$tagline]);   
     }
 
+    public function doors(){
+        list($time,$tagline) = $this->get_time_tagline();
+        return view('pages.doors',['start_time'=>$time,'tagline'=>$tagline]);  
+    }
+
     public function get_time_tagline(){
         try{
             $data = EventSchedule::get()->first();

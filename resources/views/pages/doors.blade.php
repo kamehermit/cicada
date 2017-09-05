@@ -82,8 +82,7 @@
 	</div>
 
 
-	{{ csrf_field() }}
-	<input name="_url" value="{{ url('/api/pattern-auth')}}" hidden>
+
 	<!--countdown-->
 	<div class="header">
 		<div class="container-fluid">
@@ -169,7 +168,7 @@
 				</div>	
 			</div>
 		</div> -->
-	<iframe src="{{ URL::asset('/html/navigation.html') }}" height="100%" width="100%" frameBorder="0" id="navigation"></iframe>
+	<iframe src="" height="100%" width="100%" frameBorder="0" id="doors"></iframe>
 		<button type="button" class="btn btn-danger leftbtn badge1" data-badge="" data-toggle="modal" data-target="#myModal" onclick="scrollMessagesBottomPre()">
 						Live Hints
 					</button>
@@ -210,6 +209,9 @@
 			</div>
 		</div>
 	</div>
+	<div style="text-align: center">
+		<div>Made with <span class="glyphicon glyphicon-heart" style="color:red"></span> on <b>1505881800</b></div>
+	</div>
 @endsection	
 
 @section('script')
@@ -226,7 +228,6 @@
     });
 	</script>
     <script type="text/javascript">
-    
     $(document).ready(function(){
     $("html, body").animate({ 
         scrollTop: $('#scroll').offset().top 
@@ -293,51 +294,42 @@
 		$('.badge1').attr('data-badge',differenceTriggered);
 	}
 
-	function pattern_auth(pattern){
-		console.log(pattern);
-		var temp_response={};
-		var data = {'_token': "{{ csrf_token() }}",'pattern':pattern }
-		  $.ajaxSetup({
-		    headers: {
-		      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-		    }
-		  });
-		  $.ajax({
-		    url: "{{ url('/api/pattern-auth')}}",
-		    type: 'POST',
-		    data: data,
-		    success: function(response) {
-		      //console.log(response);
-		      //if(response.status_code == '200'){
-		        //console.log(response.message);
-		        //window.frames['cmail'].contentDocument.getElementById('login-status').innerHTML = '<div style="color:green">'+response.message+'</div>';
-		        //window.location.href = response.data;
-		        this.temp_response = {
-		        	status : response.status,
-                    status_code : response.status_code,
-                    message : response.message,
-                    data : response.data
-		        };  
-		      //}
-		      //else{
-		      	//window.frames['cmail'].contentDocument.getElementById('login-status').innerHTML = response.message;
-		        //console.log(response.message);
-		        //temp_response = response;    
-		      //}
-		      
-		      //console.log($("#document_name").val());
-		    },
-		    error: function (xhr, ajaxOptions, thrownError) {
-		           console.log(xhr.status);
-		           console.log(xhr.responseText);
-		           console.log(thrownError);
 
-		       }
-		  });
-		  console.log(temp_response);
-		  return temp_response;
-	}
+function booking(){
+  
+  var date = window.frames['hotel'].contentDocument.getElementById('datepicker').value;
+  var data = {'_token': "{{ csrf_token() }}",'date':date }
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+    }
+  });
+  $.ajax({
+    url: "{{ url('/api/confirm-reservation')}}",
+    type: 'POST',
+    data: data,
+    success: function(response) {
+      //console.log(response);
+      if(response.status_code == '200'){
+        //console.log(response.message);
+        window.frames['hotel'].contentDocument.getElementById('helper').innerHTML = '<div style="color:green">'+response.message+'</div>';
+        window.location.href = response.data;  
+      }
+      else{
+      	window.frames['hotel'].contentDocument.getElementById('helper').innerHTML = '<div style="color:red">'+response.message+'</div>';
+        //console.log(response.message);    
+      }
+      
+      //console.log($("#document_name").val());
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+           console.log(xhr.status);
+           console.log(xhr.responseText);
+           console.log(thrownError);
 
+       }
+  });
+}
 
 </script>
 @endsection

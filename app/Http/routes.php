@@ -31,6 +31,7 @@ Route::group(['prefix'=>'quest/{page_id}','middleware' => ['auth','time','track'
 	Route::get('cmail/inbox',['as'=>'inbox','uses'=>'PageController@inbox']);
 	Route::get('hotel-reservation',['as'=>'hotel-reservation','uses'=>'PageController@hotel_reservation']);
 	Route::get('navigation',['as'=>'navigation','uses'=>'PageController@navigation']);
+	Route::get('doors',['as'=>'doors','uses'=>'PageController@doors']);
 
 });
 
@@ -38,4 +39,5 @@ Route::group(['prefix'=>'api','middleware' => ['auth','time']],function(){
 	Route::post('term-login','AjaxController@term_login');
 	Route::post('cmail-auth','AjaxController@cmail_auth');
 	Route::post('confirm-reservation','AjaxController@confirm_reservation');
+	Route::post('pattern-auth','AjaxController@pattern_auth');
 });

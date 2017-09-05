@@ -107,4 +107,33 @@ class AjaxController extends Controller
 
         }
     }
+
+    public function pattern_auth(Request $request){
+        $pattern = '3547896';
+        $data = $request->only('pattern');
+        $aurl = Page::where('id',7)->get(['url'])->first();
+        $url = 'http://cicada.dev'.$aurl->url;
+        try{
+            if(strcasecmp($data['pattern'], $pattern)){
+                return response()->json([
+                    'status' => 'Unauthorized',
+                    'status_code' => '401',
+                    'message' => 'Wrong pattern. Try again.',
+                    'data' => 'null'
+                    ]);
+            }
+            else{
+                User::where('id',Auth::user()->id)->update(['page_id'=>6,'timestamp'=>Carbon::now('Asia/Kolkata')]);
+                return response()->json([
+                    'status' => 'success',
+                    'status_code' => '200',
+                    'message' => 'Device unlocked successfully.',
+                    'data' => $url
+                    ]);
+            }
+        }
+        catch(Exception $e){
+
+        }
+    }
 }
