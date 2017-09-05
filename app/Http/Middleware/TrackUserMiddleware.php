@@ -30,7 +30,7 @@ class TrackUserMiddleware
                 return redirect($url->url);    
             }
             else{
-                return \Redirect::route('notlevel2');
+                return \Redirect::route('notlevel3');
             }   
         }
         if(!(strcasecmp($level,'level3'))){
@@ -40,7 +40,7 @@ class TrackUserMiddleware
                 return redirect($url->url);    
             }
             else{
-                return \Redirect::route('notlevel2');
+                return \Redirect::route('notlevel3');
             }
             
         }

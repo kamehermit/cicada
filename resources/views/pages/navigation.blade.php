@@ -1,26 +1,27 @@
 @extends('layouts.master')
 
 @section('style')
-	<!--Custom Styles-->
-	<link rel="stylesheet" type="text/css" href="{{ URL::asset('styles/index2.css')}}">
+	<title>Cicada</title>
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+	
 	<!--Count Down JQuery-->
-	<script type="text/javascript" src="{{URL::asset('scripts/jquery.countdown.min.js')}}"></script>
+	<script type="text/javascript" src="{{ URL::asset('scripts/jquery.countdown.min.js') }}"></script>
+
+	<!-- <link rel="stylesheet" href="styles/devices.min.css" type="text/css"> -->
+	
+	<!--Custom Styles-->
+	<link rel="stylesheet" type="text/css" href="{{ URL::asset('styles/index2.css') }}">
+
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-overscroll/1.7.7/jquery.overscroll.min.js" integrity="sha256-lLVO5jQTF2ASIIoPe9hYz8TZcR461/axTtX/t0Spr9E=" crossorigin="anonymous"></script>
-
-	<!--
-	########################### HINTS ###########################
-	#                                                           #
-	#                                                           #
-	#         look for all the invisible span tags	    		#
-	#                                                           #
-	#                                                           #
-	#############################################################
-	--> 
 @endsection
 
+
 @section('content')
-<!--Intro-->
+	<!--Intro-->
 	<div>
 	<style type="text/css">
 			@import url('https://fonts.googleapis.com/css?family=Bangers');
@@ -79,18 +80,19 @@
 		</script>
 		
 	</div>
-	<!--Dashboard-->
+
+
+
 	<!--countdown-->
 	<div class="header">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="header-title">
-						<img src="{{ URL::asset('images/cicada21.png')}}" class="img-responsive">
+						<img src="{{ URL::asset('images/cicada21.png') }}" class="img-responsive">
 					</div>
 				</div>
 			</div>
-			<span style="display: none;">097</span>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="countdown">
@@ -106,7 +108,6 @@
 										<div class="col-xs-2">
 											16
 											<p>HOURS</p>
-											<span style="display: none;">100</span>
 										</div>
 										<div class="col-xs-2">
 											42
@@ -120,7 +121,6 @@
 									</div>
 								</div>
 							</div>
-							<span style="display: none;">109</span>
 						</div>
 					</div>		
 				</div>
@@ -129,16 +129,46 @@
 				<div class="col-md-12">
 					<div class="tagline" id="scroll">
 						{{ $tagline }}
-						<span style="display: none;">105</span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<br>
-	<span style="display: none;">110</span>
 	<div class="leaderboard">
-		<iframe src="{{ URL::asset('html/cmail.html') }}" height="100%" width="100%" frameBorder="0" id="cmail"></iframe>
+<!-- 		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					 <div class="leaderboard-header">
+					 	<div class="row">
+					 		<div class="col-xs-12" id="game_master">
+					 			<img src="images/controller.png" class="img-responsive controller">
+					 			<div class="leaderboard-header-title">
+					 				Leaderboard	
+					 			</div>
+					 			<div id="LiveFeed"></div>
+					 		</div>
+					 	</div>
+					 	
+					 </div>
+					 <iframe src="index2.html" height="100%" width="100%"></iframe>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<button type="button" class="btn btn-demo badge1" data-badge="" data-toggle="modal" data-target="#myModal" onclick="scrollMessagesBottomPre()">
+						Live Hints
+					</button>
+				</div>
+				<div class="col-md-3">
+					<div class="play-button">
+						<a href="/quest/terminal" class="btn btn-lg btn-default btn-block">PLAY</a>	
+					</div>
+				</div>	
+			</div>
+		</div> -->
+	<iframe src="{{ URL::asset('/html/navigation.html') }}" height="100%" width="100%" frameBorder="0"></iframe>
 		<button type="button" class="btn btn-danger leftbtn badge1" data-badge="" data-toggle="modal" data-target="#myModal" onclick="scrollMessagesBottomPre()">
 						Live Hints
 					</button>
@@ -148,7 +178,7 @@
 	<div class="modal left fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-			<span style="display: none;">032</span>
+
 				
 
 				<div class="modal-body">
@@ -159,7 +189,6 @@
 							</header>
 							<div class="content-wrapper" id="scrollMessages">
 								<div class="content">
-								<span style="display: none;">097</span>
 									<ol class="messages" id="LiveFeed"><li><p>Hints during the game from Game Master will be provded here.</p></li><li><p>We are watching you. Good luck!</p></li></ol>
 								</div>
 							</div>
@@ -169,22 +198,18 @@
 
 			</div><!-- modal-content -->
 		</div><!-- modal-dialog -->
-		<span style="display: none;">100</span>
 	</div><!-- modal -->
 
 	<div class="sponsor">
 		<div class="container-fluid">
-		<span style="display: none;">097</span>
 			<div class="row">
 				<div class="col-md-12">
-					<h2>SPONSOR</h2>	
+					<h2>SPONSOR</h2>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<span style="display: none;">099</span>
-@endsection
+@endsection	
 
 @section('script')
 	<script type="text/javascript">
@@ -199,8 +224,8 @@
         });
     });
 	</script>
-	<span style="display: none;">105</span>
-	<script type="text/javascript">
+    <script type="text/javascript">
+    
     $(document).ready(function(){
     $("html, body").animate({ 
         scrollTop: $('#scroll').offset().top 
@@ -267,42 +292,6 @@
 		$('.badge1').attr('data-badge',differenceTriggered);
 	}
 
-	function login(){
-  //TODO: verify username_entered, password_entered via AJAX and remove following hardcoded code and call loginSuccess() or loginFailure() accordingly.
-  var uname = window.frames['cmail'].contentDocument.getElementById('username').value;
-  var pwd = window.frames['cmail'].contentDocument.getElementById('password').value;
-  var data = {'_token': "{{ csrf_token() }}",'username':uname,'password':pwd }
-  $.ajaxSetup({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-    }
-  });
-  $.ajax({
-    url: "{{ url('/api/cmail-auth')}}",
-    type: 'POST',
-    data: data,
-    success: function(response) {
-      //console.log(response);
-      if(response.status_code == '200'){
-        //console.log(response.message);
-        window.frames['cmail'].contentDocument.getElementById('login-status').innerHTML = '<div style="color:green">'+response.message+'</div>';
-        window.location.href = response.data;  
-      }
-      else{
-      	window.frames['cmail'].contentDocument.getElementById('login-status').innerHTML = response.message;
-        //console.log(response.message);    
-      }
-      
-      //console.log($("#document_name").val());
-    },
-    error: function (xhr, ajaxOptions, thrownError) {
-           console.log(xhr.status);
-           console.log(xhr.responseText);
-           console.log(thrownError);
 
-       }
-  });
-}
 </script>
-<span style="display: none;">099</span>
 @endsection

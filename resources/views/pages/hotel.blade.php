@@ -168,7 +168,7 @@
 				</div>	
 			</div>
 		</div> -->
-	<iframe src="{{ URL::asset('/html/hotel.html') }}" height="100%" width="100%" frameBorder="0"></iframe>
+	<iframe src="{{ URL::asset('/html/hotel.html') }}" height="100%" width="100%" frameBorder="0" id="hotel"></iframe>
 		<button type="button" class="btn btn-danger leftbtn badge1" data-badge="" data-toggle="modal" data-target="#myModal" onclick="scrollMessagesBottomPre()">
 						Live Hints
 					</button>
@@ -208,6 +208,9 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div style="text-align: center">
+		<div>Made with <span class="glyphicon glyphicon-heart" style="color:red"></span> on <b>1505881800</b></div>
 	</div>
 @endsection	
 
@@ -291,6 +294,42 @@
 		$('.badge1').attr('data-badge',differenceTriggered);
 	}
 
+
+function booking(){
+  
+  var date = window.frames['hotel'].contentDocument.getElementById('datepicker').value;
+  var data = {'_token': "{{ csrf_token() }}",'date':date }
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+    }
+  });
+  $.ajax({
+    url: "{{ url('/api/confirm-reservation')}}",
+    type: 'POST',
+    data: data,
+    success: function(response) {
+      //console.log(response);
+      if(response.status_code == '200'){
+        //console.log(response.message);
+        window.frames['hotel'].contentDocument.getElementById('helper').innerHTML = '<div style="color:green">'+response.message+'</div>';
+        window.location.href = response.data;  
+      }
+      else{
+      	window.frames['hotel'].contentDocument.getElementById('helper').innerHTML = '<div style="color:red">'+response.message+'</div>';
+        //console.log(response.message);    
+      }
+      
+      //console.log($("#document_name").val());
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+           console.log(xhr.status);
+           console.log(xhr.responseText);
+           console.log(thrownError);
+
+       }
+  });
+}
 
 </script>
 @endsection
