@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Doors</title>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://s.codepen.io/assets/libs/prefixfree.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<style type="text/css">
+	body
+{
+  background-color:#f0f0f0;
+}
+
+.container
+{
+            margin:0 auto;
+            width:100%;
+}
+.perspective
+{
+   background: url("http://dc428.4shared.com/img/QWu4ziBq/s3/doorBorder.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: relative;
+            display: inline;
+            float: left;
+            height: 274px;
+            width: 147px;
+            margin: 20px;
+            margin-left: 0px;
+            -webkit-perspective: 450;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        
+        .thumb
+        {
+            background: url("http://dc428.4shared.com/img/-vayshJ-/s3/ClassDoor.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 147px;
+            height: 274px;
+            position: absolute;
+            box-sizing: border-box;
+            border-radius: 3px;
+            box-shadow: 0 0 0 10px rgba(255, 255, 255, .0) inset;
+            transition: 1s transform linear;
+            transform-origin: left;
+            cursor: pointer;
+        }
+        
+        .thumbOpened
+        {
+            transform: rotateY(-90deg);
+            transform-origin: 8px;
+            transition: .5s linear;
+        }
+
+@keyframes go {
+  100%{
+    opacity:1;
+    transform:rotateY(0deg);
+  }
+}
+.hallway{
+    padding: auto;
+    margin: auto;
+    
+}
+.riddle{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    padding: auto;
+    margin: auto;
+}
+</style>
+
+<!--<p class="alert">click on the door and try to click on more than one door</p>-->
+<div class="container">
+<div class="hallway">
+        <div class="perspective" onclick="openDoor(this)">
+            <div class="thumb" id="1">
+            </div>
+        </div>
+        <div class="perspective" onclick="openDoor(this)" >
+            <div class="thumb" id="2">
+            </div>
+        </div>
+        <div class="perspective" onclick="openDoor(this)">
+            <div class="thumb" id="3">
+            </div>
+        </div>
+        <div class="perspective" onclick="openDoor(this)">
+            <div class="thumb" id="4">
+            </div>
+        </div>
+         <div class="perspective" onclick="openDoor(this)">
+            <div class="thumb" id="5">
+            </div>
+        </div>
+         <div class="perspective" onclick="openDoor(this)">
+            <div class="thumb" id="6">
+            </div>
+        </div>
+         <div class="perspective" onclick="openDoor(this)">
+            <div class="thumb" id="7">
+            </div>
+        </div>
+</div>
+</div>
+<div class="container">
+<div class="riddle">
+<div class="text">
+    <p>Danger lies before you, while safety lies behind
+your fate will be decided, by whichever door you find.</p>
+<p>One among us seven will let you move ahead,
+another will transport the traveller back instead*.</p>
+<p>
+    2 among our number, are virtually harmless
+3 are rigged with bombs, won't leave you painless.
+</p>
+<p>
+    Choose, unless you wish to stay here forever more
+to help you in your choice, you have these clues four.
+</p>
+<p>
+    <ul>
+        <li>
+            1st, however slyly the bomb tries to hide
+you'll always find some on harmless one's right side.
+        </li>
+        <li>
+            2nd, different are those who stand at either end
+but if you would move onwards, neither is your friend.
+        </li>
+        <li>
+            3rd, as you clearly see, all are different size
+neither dwarf nor giant hold death in their insides.
+        </li>
+        <li>
+            4th, the second left and second on the right
+are twins, once you realize, though different at first sight.
+        </li>
+    </ul>
+</p>
+</div>
+</div>
+
+</div>
+<script type="text/javascript">
+	function openDoor(field) {
+            var y = $(field).find(".thumb");
+            //console.log(y.attr('id'));
+            var csrf = $('[name="_token"]', window.parent.document).val();
+          var url = $('[name="_url"]', window.parent.document).val();
+          var data = {'_token': csrf,'door':y.attr('id') }
+          $.ajaxSetup({
+            headers: {
+              'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+            }
+          });
+          $.ajax({
+        url: url,
+        type: 'POST',
+        data: data,
+        success: function(response) {
+          console.log(response);
+          if(response.status_code == '200'){
+            console.log(response.message);
+            //$('#status').html(response.message);
+            window.top.location.href = response.data;
+          }
+          else{
+            //$('#status').html(response.message);
+            //lock.error();
+            //setTimeout(function(){
+            //  lock.reset();
+            //}, 1000);
+            //window.frames['cmail'].contentDocument.getElementById('login-status').innerHTML = response.message;
+            //temp_response = response;
+            if(response.data != 'null'){
+                window.top.location.href = response.data;   
+                //console.log(response.data); 
+            }    
+            
+          }
+          
+          //console.log($("#document_name").val());
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+               console.log(xhr.status);
+               console.log(xhr.responseText);
+               console.log(thrownError);
+
+           }
+      });
+            var x = y.attr("class");
+            if (y.hasClass("thumbOpened")) {
+                y.removeClass("thumbOpened");
+            }
+            else {
+                $(".thumb").removeClass("thumbOpened");
+                y.addClass("thumbOpened");
+            }
+        }
+</script>
+</body>
+</html>

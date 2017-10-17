@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(EventScheduleSeeder::class);
         $this->call(PageSeeder::class);
+        $this->call(BanTypeSeeder::class);
     }
 }

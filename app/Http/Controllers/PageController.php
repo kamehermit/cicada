@@ -9,9 +9,18 @@ use App\EventSchedule;
 use Carbon\Carbon;
 use App\User;
 use Auth;
+use App\BanUser;
 
 class PageController extends Controller
 {
+    public function start(){
+        return view('pages.start');
+    }
+
+    public function text(){
+        return view('pages.text');
+    }
+
     public function index(){
         list($time,$tagline) = $this->get_time_tagline();
         return view('pages.index',['start_time'=>$time,'tagline'=>$tagline]);
@@ -59,6 +68,40 @@ class PageController extends Controller
     public function doors(){
         list($time,$tagline) = $this->get_time_tagline();
         return view('pages.doors',['start_time'=>$time,'tagline'=>$tagline]);  
+    }
+
+    public function banned(){
+        //list($time,$tagline) = $this->get_time_tagline();
+        $check = BanUser::where('user_id',\Auth::user()->id)->orderBy('timestamp','desc')->get(['timestamp','type_id'])->first();
+        if(!$check){
+            return redirect('dashboard');
+            //$cur_time = Carbon::now('Asia/Kolkata');
+            //$ban_time = Carbon::createFromFormat('Y-m-d H:i:s', $check->timestamp, 'Asia/Kolkata');
+            //if($cur_time->diffInHours($ban_time)<1){
+                //return view('pages.banned');
+            //    return \Redirect::route('banned');
+            //}
+        }
+        $cur_time = Carbon::now('Asia/Kolkata');
+        $ban_time = Carbon::createFromFormat('Y-m-d H:i:s', $check->timestamp, 'Asia/Kolkata');
+        if($check->type_id==1){
+            if($cur_time->diffInMinutes($ban_time)<30)
+                return view('pages.banned');
+            else
+                return redirect('dashboard');
+        }
+        if($check->type_id==2){
+            if($cur_time->diffInHours($ban_time)<1)
+                return view('pages.banned');
+            else
+                return redirect('dashboard');
+        }
+        return view('pages.banned');
+    }
+
+    public function usb(){
+        list($time,$tagline) = $this->get_time_tagline();
+        return view('pages.usb',['start_time'=>$time,'tagline'=>$tagline]);   
     }
 
     public function get_time_tagline(){

@@ -12,8 +12,8 @@ class EventScheduleSeeder extends Seeder
     public function run()
     {
         DB::table('event_schedules')->insert([
-        		'start' => '2017-06-10 10:00:00',
-        		'end' => '2017-06-11 10:00:00',
+        		'start' => '2017-09-07 10:00:00',
+        		'end' => '2017-09-20 10:00:00',
         	]);
     }
 }

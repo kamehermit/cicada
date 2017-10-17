@@ -10,6 +10,7 @@ use App\User;
 use Carbon\Carbon;
 use Auth;
 use App\Page;
+use App\BanUser;
 
 class AjaxController extends Controller
 {
@@ -18,7 +19,7 @@ class AjaxController extends Controller
     	$pwd = 'reeves';
     	$data = $request->only('username','password');
     	$aurl = Page::where('id',2)->get(['url'])->first();
-    	$url = 'http://cicada.dev'.$aurl->url;
+    	$url = \URL::to('/').$aurl->url;
     	try{
     		if(strcasecmp($data['username'],$uname) || strcasecmp($data['password'], $pwd)){
     			return response()->json([
@@ -48,7 +49,7 @@ class AjaxController extends Controller
         $pwd = 'adacic';
         $data = $request->only('username','password');
         $aurl = Page::where('id',4)->get(['url'])->first();
-        $url = 'http://cicada.dev'.$aurl->url;
+        $url = \URL::to('/').$aurl->url;
     	try{
             if(strcasecmp($data['username'],$uname) || strcasecmp($data['password'], $pwd)){
                 return response()->json([
@@ -83,7 +84,7 @@ class AjaxController extends Controller
         $date='09/20/2017';
         $data = $request->only('date');
         $aurl = Page::where('id',6)->get(['url'])->first();
-        $url = 'http://cicada.dev'.$aurl->url;
+        $url = \URL::to('/').$aurl->url;
         try{
             if(strcasecmp($data['date'], $date)){
                 return response()->json([
@@ -112,7 +113,7 @@ class AjaxController extends Controller
         $pattern = '3547896';
         $data = $request->only('pattern');
         $aurl = Page::where('id',7)->get(['url'])->first();
-        $url = 'http://cicada.dev'.$aurl->url;
+        $url = \URL::to('/').$aurl->url;
         try{
             if(strcasecmp($data['pattern'], $pattern)){
                 return response()->json([
@@ -128,6 +129,66 @@ class AjaxController extends Controller
                     'status' => 'success',
                     'status_code' => '200',
                     'message' => 'Device unlocked successfully.',
+                    'data' => $url
+                    ]);
+            }
+        }
+        catch(Exception $e){
+
+        }
+    }
+
+    public function door_auth(Request $request){
+        $door = '4';
+        $data = $request->only('door');
+        $aurl = Page::where('id',8)->get(['url'])->first();
+        $url = \URL::to('/').$aurl->url;
+        $ban_url = \URL::to('/banned');
+        try{
+            if(strcasecmp($data['door'], $door)){
+            //BanUser::create([
+            //    'user_id' => Auth::user()->id,
+            //    'timestamp' => Carbon::now('Asia/Kolkata')
+            //]);
+                if($data['door']==1){
+                    \DB::table('ban_users')->insert([
+                        'user_id' => Auth::user()->id,
+                        'timestamp' => Carbon::now('Asia/Kolkata'),
+                        'type_id' => 1,
+                    ]);
+                }
+                else if($data['door']==3 || $data['door']==5 || $data['door']==7){
+                    \DB::table('ban_users')->insert([
+                        'user_id' => Auth::user()->id,
+                        'timestamp' => Carbon::now('Asia/Kolkata'),
+                        'type_id' => 2,
+                    ]);
+                }
+                else{
+                    return response()->json([
+                        'status' => 'Unauthorized',
+                        'status_code' => '401',
+                        'message' => 'Wrong door.',
+                        'data' => 'null'
+                    ]);
+                }
+                //\DB::table('ban_users')->insert([
+                //    'user_id' => Auth::user()->id,
+                //    'timestamp' => Carbon::now('Asia/Kolkata'),
+                //]);
+                return response()->json([
+                    'status' => 'Unauthorized',
+                    'status_code' => '401',
+                    'message' => 'Wrong door.',
+                    'data' => $ban_url
+                    ]);
+            }
+            else{
+                User::where('id',Auth::user()->id)->update(['page_id'=>7,'timestamp'=>Carbon::now('Asia/Kolkata')]);
+                return response()->json([
+                    'status' => 'success',
+                    'status_code' => '200',
+                    'message' => 'Door unlocked.',
                     'data' => $url
                     ]);
             }

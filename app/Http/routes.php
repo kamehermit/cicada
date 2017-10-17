@@ -11,6 +11,11 @@
 |
 */
 
+Route::group(['prefix' =>'promo/{page_id}'], function(){
+	Route::get('start',['as'=>'start','uses'=>'PageController@start']);
+	Route::get('text',['as'=>'text','uses'=>'PageController@text']);
+});
+
 Route::get('/',['as' => 'index','uses' => 'PageController@index']);
 Route::get('auth/facebook', 'AuthController@redirect');
 Route::get('auth/facebook/callback', 'AuthController@callback');
@@ -22,6 +27,8 @@ Route::group(['middleware' => ['auth']],function(){
 Route::group(['middleware' => ['auth','time']], function(){
 	Route::get('notlevel3',['as'=>'notlevel3','uses' => 'PageController@notlevel3']);
 	Route::get('hotel-reservation-efr92h48e',['as'=>'hotel-reservation-efr92h48e','uses' => 'AjaxController@hotel_reservation']);
+	Route::get('banned',['as'=>'banned','uses'=>'PageController@banned']);
+	//Route::get('')
 });
 
 Route::group(['prefix'=>'quest/{page_id}','middleware' => ['auth','time','track','ban']], function(){
@@ -32,7 +39,7 @@ Route::group(['prefix'=>'quest/{page_id}','middleware' => ['auth','time','track'
 	Route::get('hotel-reservation',['as'=>'hotel-reservation','uses'=>'PageController@hotel_reservation']);
 	Route::get('navigation',['as'=>'navigation','uses'=>'PageController@navigation']);
 	Route::get('doors',['as'=>'doors','uses'=>'PageController@doors']);
-
+	Route::get('usb',['as'=>'usb','uses'=>'PageController@usb']);
 });
 
 Route::group(['prefix'=>'api','middleware' => ['auth','time']],function(){
@@ -40,4 +47,5 @@ Route::group(['prefix'=>'api','middleware' => ['auth','time']],function(){
 	Route::post('cmail-auth','AjaxController@cmail_auth');
 	Route::post('confirm-reservation','AjaxController@confirm_reservation');
 	Route::post('pattern-auth','AjaxController@pattern_auth');
+	Route::post('door-auth','AjaxController@door_auth');
 });

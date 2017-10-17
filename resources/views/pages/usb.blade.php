@@ -82,7 +82,6 @@
 	</div>
 
 	{{ csrf_field() }}
-	<input name="_url" value="{{ url('/api/door-auth')}}" hidden>
 
 	<!--countdown-->
 	<div class="header">
@@ -169,7 +168,7 @@
 				</div>	
 			</div>
 		</div> -->
-	<iframe src="{{ URL::asset('/html/doors.html') }}" height="100%" width="100%" frameBorder="0" id="doors"></iframe>
+	<iframe src="" height="100%" width="100%" frameBorder="0" id="usb"></iframe>
 		<button type="button" class="btn btn-danger leftbtn badge1" data-badge="" data-toggle="modal" data-target="#myModal" onclick="scrollMessagesBottomPre()">
 						Live Hints
 					</button>
@@ -210,6 +209,7 @@
 			</div>
 		</div>
 	</div>
+	
 @endsection	
 
 @section('script')
@@ -291,8 +291,6 @@
 
 		$('.badge1').attr('data-badge',differenceTriggered);
 	}
-
-
 
 
 </script>

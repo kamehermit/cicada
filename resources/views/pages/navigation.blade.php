@@ -293,50 +293,7 @@
 		$('.badge1').attr('data-badge',differenceTriggered);
 	}
 
-	function pattern_auth(pattern){
-		console.log(pattern);
-		var temp_response={};
-		var data = {'_token': "{{ csrf_token() }}",'pattern':pattern }
-		  $.ajaxSetup({
-		    headers: {
-		      'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
-		    }
-		  });
-		  $.ajax({
-		    url: "{{ url('/api/pattern-auth')}}",
-		    type: 'POST',
-		    data: data,
-		    success: function(response) {
-		      //console.log(response);
-		      //if(response.status_code == '200'){
-		        //console.log(response.message);
-		        //window.frames['cmail'].contentDocument.getElementById('login-status').innerHTML = '<div style="color:green">'+response.message+'</div>';
-		        //window.location.href = response.data;
-		        this.temp_response = {
-		        	status : response.status,
-                    status_code : response.status_code,
-                    message : response.message,
-                    data : response.data
-		        };  
-		      //}
-		      //else{
-		      	//window.frames['cmail'].contentDocument.getElementById('login-status').innerHTML = response.message;
-		        //console.log(response.message);
-		        //temp_response = response;    
-		      //}
-		      
-		      //console.log($("#document_name").val());
-		    },
-		    error: function (xhr, ajaxOptions, thrownError) {
-		           console.log(xhr.status);
-		           console.log(xhr.responseText);
-		           console.log(thrownError);
-
-		       }
-		  });
-		  console.log(temp_response);
-		  return temp_response;
-	}
+	
 
 
 </script>
